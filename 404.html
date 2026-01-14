@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      // This script catches old /blog/ paths and sends them to the root
+      var path = window.location.pathname;
+      if (path.indexOf('/blog/') !== -1) {
+        // Redirects anything from /blog/xxx to just /xxx
+        var newPath = path.replace('/blog/', '/');
+        window.location.href = window.location.origin + newPath;
+      } else {
+        // If it's a genuine 404, send them to the homepage
+        window.location.href = window.location.origin;
+      }
+    </script>
+    <meta http-equiv="refresh" content="5;url=https://www.simonlong.co.uk/">
+  </head>
+  <body>
+    <p>The blog has moved! Redirecting you now... if you aren't redirected, <a href="/">click here</a>.</p>
+  </body>
+</html>
