@@ -22,6 +22,7 @@ xmlns:rawvoice="https://blubrry.com/developer/rawvoice-rss/"
 		<generator>https://wordpress.org/?v=6.9</generator>
 	<atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
 	<itunes:author>Simon Long</itunes:author>
+	<itunes:explicit>no</itunes:explicit>
 	<itunes:image href="http://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3.jpg" />
 	<itunes:type>episodic</itunes:type>
 	<itunes:owner>
