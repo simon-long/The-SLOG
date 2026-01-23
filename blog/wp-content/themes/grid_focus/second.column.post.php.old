@@ -1,0 +1,109 @@
+<?php
+/**
+ *	@package WordPress
+ *	@subpackage Grid_Focus
+ */
+?>
+<div class="secondaryColumn">
+<?php include (TEMPLATEPATH . '/searchform.php'); ?>
+<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar(1) ) : ?>
+<?php endif; ?>
+
+	<div id="midCol">
+	<?php include (TEMPLATEPATH . '/searchform.php'); ?>
+	<div class="middle_links">
+<?php if (function_exists('get_recent_comments')) { ?>
+<li><h3><?php _e('Recent Comments'); ?></h3>
+      <ul>
+      <?php get_recent_comments(); ?>
+      </ul>
+</li>
+<?php } ?>   
+
+
+	</div>
+<!--	<div class="middle_links">
+		<h3>My Top 5 Recommended Blog Posts</h3>
+		<p>Here's a pick of my favorite Blog Posts.</p>
+		<ul>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/blogs.png" border="0" width="16" height="16" alt="Recommended Blog Posts" style="padding-right:5px;"/><a href="#" target=_new">Link Title</a> - Link description</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/blogs.png" border="0" width="16" height="16" alt="Recommended Blog Posts" style="padding-right:5px;"/><a href="#" target=_new">Link Title</a> - Link description</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/blogs.png" border="0" width="16" height="16" alt="Recommended Blog Posts" style="padding-right:5px;"/><a href="#" target=_new">Link Title</a> - Link description</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/blogs.png" border="0" width="16" height="16" alt="Recommended Blog Posts" style="padding-right:5px;"/><a href="#" target=_new">Link Title</a> - Link description</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/blogs.png" border="0" width="16" height="16" alt="Recommended Blog Posts" style="padding-right:5px;"/><a href="#" target=_new">Link Title</a> - Link description</li>
+		</ul>-->
+	<div class="middle_links">
+		<h3>My Top 5 Blog Posts</h3>
+		<p>The most popular Posts.</p>
+<?php if (function_exists('get_most_viewed')): ?>
+   <ul>
+      <?php get_most_viewed('both', 5); ?>
+   </ul>
+<?php endif; ?> 
+	</div>
+	<div class="middle_links">
+		<h3>My Top 5 Twitter Users</h3>
+		<p>Clever people worth following on Twitter.</p>
+		<ul>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/balloon_twitter.png" border="0" width="16" height="16" alt="Top Twitter Users" style="padding-right:5px;"/><a href="http://twitter.com/depping" target="_new">Duncan Epping</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/balloon_twitter.png" border="0" width="16" height="16" alt="Top Twitter Users" style="padding-right:5px;"/><a href="http://twitter.com/jasonboche" target="_new">Jason Boche</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/balloon_twitter.png" border="0" width="16" height="16" alt="Top Twitter Users" style="padding-right:5px;"/><a href="http://twitter.com/tom_howarth" target="_new">Tom Howarth</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/balloon_twitter.png" border="0" width="16" height="16" alt="Top Twitter Users" style="padding-right:5px;"/><a href="http://twitter.com/alanrenouf" target="_new">Alan Renouf</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/balloon_twitter.png" border="0" width="16" height="16" alt="Top Twitter Users" style="padding-right:5px;"/><a href="http://twitter.com/gabvirtualworld" target="_new">Gabe</a></li>
+		</ul>
+	</div>
+	<div class="middle_links">
+		<h3>My Recommended Blog sites</h3>
+		<p>Sites with feeds i personally follow.</p>
+		<ul>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://www.2vcps.com" target="_new">2 VCP's and a Truck</a> - Jon Owings</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://www.van-lieshout.com" target="_new">Arnim van Lieshout</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://blog.scottlowe.org" target="_new">blog.scottlowe.org</a> - Scott Lowe</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://www.boche.net" target="_new">boche.net</a> - Jason Boche</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://dantedog29.blogspot.com/" target="_new">DanteDog</a> - Kenon Owens</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://virtualize.wordpress.com" target="_new">Documenting a virtualization project</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://www.itworld.com/virtualization/" target="_new">Edward Haletky's blog</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://www.gabesvirtualworld.com" target="_new">Gabes Virtual World</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://blog.virtualarchitect.nl" target="_new">Gerben's Blog</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://get-admin.com/blog/" target="_new">get-admin</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://www.hypervizor.com" target="_new">HyperViZor</a> - Hany Michael</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://www.jasemccarty.com/blog/" target="_new">Jase's Place</a> - Jase McCarty</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://kensvirtualreality.blogspot.com/" target="_new">Ken's Virtual Reality </a> - Ken Cline</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://www.mikedipetrillo.com/" target="_new">Mike D's Virtualization Blog</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://rodos.haywood.org" target="_new">Musings of Rodos</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://www.ntpro.nl" target="_new">NTPRO.NL</a> - Eric Sloof</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://www.PeetersOnline.nl" target="_new">PeetersOnline.nl</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://www.PlanetVM.net" target="_new">PlanetVM</a> - Tom Howarth</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://professionalvmware.com" target="_new">Professional VMware</a> - Cody Bunch</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://rogerlunditblog.blogspot.com" target="_new">Roger Lund's IT & VMware Blog</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://itknowledgeexchange.techtarget.com/server-virtualization" target="_new">Server Virtualization Blog</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://www.TechHead.co.uk" target="_new">TechHead.co.uk</a> - Kiwi Si</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://technodrone.blogspot.com" target="_new">Technodrone</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://vmguy.com/wordpress/" target="_new">The VMguy</a> - Dave Lawrence</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://www.vcritical.com" target="_new">VCritical</a> - Eric Gray</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://viops.vmware.com/home/" target="_new">VI:OPS</a> - Link description</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://vinternals.com" target="_new">vinternals</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://teckinfo.blogspot.com/" target="_new">Virtu-Al</a> - Alan Renouf</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://www.thevirtualblackhole.com" target="_new">Virtual Black Hole</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://virtualgeek.typepad.com/virtual_geek/" target="_new">Virtual Geek</a> - Chad Sakac</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://www.virtuallifestyle.nl" target="_new">Virtual Lifestyle</a> - Joep Piscaer</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://virtualfuture.info" target="_new">Virtualfuture.info</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://itknowledgeexchange.techtarget.com/virtualization-pro" target="_new">Virtualization Pro</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://vinf.net/" target="_new">Virtualization, Windows, Infra..</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://www.virtualization.info" target="_new">virtualization.info</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://vmetc.com" target="_new">VM /ETC</a> - Rich Brambley</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://erikzandboer.wordpress.com" target="_new">VMdamentals Blog</a> - Erik Zandboer</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://kb.vmware.com/selfservice/" target="_new">VMware RSS Feed</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://vmwaretips.com/wp" target="_new">VMware Tips</a> - Rick Scherer</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://vmware-land.com" target="_new">VMware-land</a> - Eric Siebert</li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://blogs.vmware.com/virtualreality" target="_new">VMware: Virtual Reality</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://blogs.vmware.com/performance" target="_new">VROOM!</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://www.run-virtual.com" target="_new">www.run-virtual.com</a></li>
+			<li><img src="<?php bloginfo('template_directory'); ?>/images/star.png" border="0" width="16" height="16" alt="Simon Long's Blog Roll" style="padding-right:5px;"/><a href="http://www.yellow-bricks.com" target="_new">Yellow Bricks</a> - Duncan Epping</li>
+			
+			
+		</ul>
+	</div>
+</div>
+
+</div>
