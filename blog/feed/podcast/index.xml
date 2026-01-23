@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+xmlns:podcast="https://podcastindex.org/namespace/1.0"
+xmlns:rawvoice="https://blubrry.com/developer/rawvoice-rss/"
+>
+<channel>
+	<title>The VCDX Podcast</title>
+	<atom:link href="https://www.simonlong.co.uk/blog/feed/podcast/" rel="self" type="application/rss+xml" />
+	<link>https://www.simonlong.co.uk/blog</link>
+	<description></description>
+	<lastBuildDate>Thu, 28 Oct 2021 23:44:29 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+		<generator>https://wordpress.org/?v=6.9</generator>
+	<atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+	<itunes:author>Simon Long</itunes:author>
+	<itunes:image href="http://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3.jpg" />
+	<itunes:type>episodic</itunes:type>
+	<itunes:owner>
+		<itunes:name>Simon Long</itunes:name>
+		<itunes:email>simon@simonlong.co.uk</itunes:email>
+	</itunes:owner>
+	<podcast:medium>podcast</podcast:medium>
+	<image>
+		<title>The VCDX Podcast</title>
+		<url>http://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3.jpg</url>
+		<link>https://www.simonlong.co.uk/blog</link>
+	</image>
+	<itunes:category text="Education" />
+	<itunes:category text="Education">
+		<itunes:category text="Self-Improvement" />
+	</itunes:category>
+	<podcast:podping usesPodping="true" />
+	<podcast:guid>53d1bff8-6a66-5878-a55c-bf9ef05d45dd</podcast:guid>
+	<rawvoice:subscribe feed="https://www.simonlong.co.uk/blog/feed/podcast/" itunes="https://podcasts.apple.com/us/podcast/the-vcdx-podcast/id1461672691" tunein="https://tunein.com/podcasts/Education-Podcasts/The-VCDX-Podcast-p1220964/" spotify="https://open.spotify.com/show/2x7VzPFFa8yD9Far0Eig3K?si=DI4QZ2orT2ekfPHh0T1-1Q" iheart="https://www.iheart.com/podcast/256-the-vcdx-podcast-43080942/" deezer="https://deezer.com/show/910012"></rawvoice:subscribe>
+        <podcast:trailer url="https://f005.backblazeb2.com/file/vcdx-podcast/Trailer-The_VCDX_Podcast.m4a" pubdate="Wed, 26 Feb 2020 02:47:00 +0000" length="4439079" type="audio/x-m4a" >What Is The VCDX Podcast?</podcast:trailer>
+            	<item>
+		<title>EP13 &#8211; Defending Remotely</title>
+		<link>https://www.simonlong.co.uk/blog/2021/02/18/ep13-defending-remotely/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=ep13-defending-remotely</link>
+		<pubDate>Thu, 18 Feb 2021 20:14:42 +0000</pubDate>
+		<guid isPermaLink="false">https://www.simonlong.co.uk/blog/?p=7502</guid>
+		<comments>https://www.simonlong.co.uk/blog/2021/02/18/ep13-defending-remotely/#respond</comments>
+		<wfw:commentRss>https://www.simonlong.co.uk/blog/2021/02/18/ep13-defending-remotely/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[VCDX]]></category>
+		<category><![CDATA[vcdxpodcast]]></category>
+		<description><![CDATA[<p><img decoding="async" class="alignright size-thumbnail wp-image-6301" src="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg" alt="" width="150" height="150" srcset="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg 150w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-300x300.jpg 300w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small.jpg 500w" sizes="(max-width: 150px) 100vw, 150px" />In episode thirteen of The VCDX Podcast, I am joined by two special guests who share their experiences of defending remotely and offer up plenty of great advice on how to tailor your preparation for a remote defense.</p>
+<h4><strong>News &amp; Updates</strong></h4>
+<p><strong>New VCDX&#8217;s</strong></p>
+<p>Congratulations to the newly minted VCDX’s since our last episode. All VCDX&#8217;s can be found in <a href="https://vcdx.vmware.com/" target="_blank" rel="noopener">The VCDX Directory</a></p>
+<p>VCDX #291 – <a href="https://twitter.com/vv_piter" target="_blank" rel="noopener">Pawel Piotrowski</a> &#8211; Poland &#8211; (DCV)<br />
+VCDX #292 &#8211; <a href="https://twitter.com/AsafBlubshtein" target="_blank" rel="noopener">Asaf Blubshtein</a> &#8211; US &#8211; (DCV)</p>
+<p><strong>Important Dates</strong></p>
+<p>The forthcoming online VCDX Workshop:</p>
+<ul>
+<li>Friday, Feb 26th, 2021 – <a href="https://www.eventbrite.com/e/online-vcdx-workshop-tickets-138926465799" target="_blank" rel="noopener">Register Here</a></li>
+</ul>
+<p>Up and coming application deadline for the June 2021 VCDX Defenses:</p>
+<ul>
+<li>Thursday, April 8th, 2021 (Don&#8217;t wait until the deadline to submit!!)</li>
+</ul>
+<p>All important VCDX dates can be found on <a href="https://vcdx.vmware.com/calendar.html" target="_blank" rel="noopener">The VCDX Calendar </a></p>
+<h4></h4>
+<h4><strong>Interview Notes &amp; Links</strong></h4>
+<p>This episode&#8217;s special guests are:</p>
+<ul>
+<li><a href="https://twitter.com/UltTransformer" target="_blank" rel="noopener">Chris Noon (#289)</a> &#8211; <a href="https://vmusketeers.com/" target="_blank" rel="noopener">https://vmusketeers.com/</a></li>
+<li><a href="https://twitter.com/AsafBlubshtein" target="_blank" rel="noopener">Asaf Blubshtein (#292)</a> &#8211; <a href="https://softwaredefinedcoffee.com" target="_blank" rel="noopener">https://softwaredefinedcoffee.com</a></li>
+</ul>
+<p>Products discussed in the episode:</p>
+<ul>
+<li><a href="https://www.apple.com/apple-pencil/" target="_blank" rel="noopener">Apple Pencil</a></li>
+<li><a href="http://www.qrayon.com/home/AirSketchPro/" target="_blank" rel="noopener">AirSketch Pro</a></li>
+<li><a href="https://store.huion.com/products/huion-hs611" target="_blank" rel="noopener">Huion HS611</a></li>
+</ul>
+<p>&nbsp;</p>
+<h4><strong>Q&amp;A</strong></h4>
+<p>As always, if you have any questions you want answering on the Podcast, please send them to me via the two options below:</p>
+<ul>
+<li>My Twitter account: <a href="https://twitter.com/simonlong_" target="_blank" rel="noopener noreferrer">https://twitter.com/simonlong_</a></li>
+<li>Or find me on <a href="https://vcdxprepgroup.slack.com/" target="_blank" rel="noopener noreferrer">The VCDX Prep Slack Team</a></li>
+</ul>
+<p>I&#8217;m always looking for feedback and ways to improve the podcast, so please, contact me with any thoughts and feedback you might have. If you enjoyed this episode, please remember to subscribe (using the links below) and let others know about it on social media.</p>]]></description>
+		<enclosure url="https://f005.backblazeb2.com/file/vcdx-podcast/EP13-Defending_Remotely.m4a" length="71658150" type="audio/x-m4a" />
+		<itunes:author>Simon Long</itunes:author>
+		<itunes:episode>13</itunes:episode>
+		<podcast:episode>13</podcast:episode>
+		<itunes:title>EP13 - Defending Remotely</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:duration>29:19</itunes:duration>
+	</item>
+	<item>
+		<title>EP12 &#8211; Observations From The Other Side</title>
+		<link>https://www.simonlong.co.uk/blog/2020/11/20/ep12-observations-from-the-other-side/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=ep12-observations-from-the-other-side</link>
+		<pubDate>Fri, 20 Nov 2020 19:42:40 +0000</pubDate>
+		<guid isPermaLink="false">https://www.simonlong.co.uk/blog/?p=7227</guid>
+		<comments>https://www.simonlong.co.uk/blog/2020/11/20/ep12-observations-from-the-other-side/#respond</comments>
+		<wfw:commentRss>https://www.simonlong.co.uk/blog/2020/11/20/ep12-observations-from-the-other-side/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ExcludeFromFrontPage]]></category>
+		<category><![CDATA[VCDX]]></category>
+		<category><![CDATA[vcdxpodcast]]></category>
+		<description><![CDATA[<p><img decoding="async" class="alignright size-thumbnail wp-image-6301" src="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg" alt="" width="150" height="150" srcset="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg 150w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-300x300.jpg 300w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small.jpg 500w" sizes="(max-width: 150px) 100vw, 150px" />In episode twelve of The VCDX Podcast, I am joined by two special guests to talk about their recent experiences of being observers in the latest VCDX defenses.</p>
+<p><strong>News &amp; Updates</strong></p>
+<p>The forthcoming online VCDX Workshop</p>
+<ul>
+<li>Friday, December 4, 2020 &#8211; <a href="https://www.eventbrite.com/e/online-vcdx-workshop-tickets-110955236098" target="_blank" rel="noopener noreferrer">Register Here</a></li>
+</ul>
+<p>March 2020 Defense Applications close on Monday, January 4th. Don&#8217;t wait until the deadline to submit!!</p>
+<p><strong>Interview Notes &amp; Links</strong></p>
+<p>This week&#8217;s special guests are:</p>
+<ul>
+<li><a href="https://twitter.com/phoebesykim" target="_blank" rel="noopener noreferrer">Phoebe Kim</a> (VCDX #288)</li>
+<li><a href="https://twitter.com/vMBaggum" target="_blank" rel="noopener noreferrer">Marco van Baggum</a> (VCDX #223)</li>
+</ul>
+<p><strong>Q&amp;A</strong></p>
+<p>As always, if you have any questions you want answering on the Podcast, please send them to me via the two options below:</p>
+<ul>
+<li>My Twitter account: <a href="https://twitter.com/simonlong_" target="_blank" rel="noopener noreferrer">https://twitter.com/simonlong_</a></li>
+<li>Or find me on <a href="https://vcdxprepgroup.slack.com/" target="_blank" rel="noopener noreferrer">The VCDX Prep Slack Team</a></li>
+</ul>
+<p>I&#8217;m always looking for feedback and ways to improve the podcast, so please, contact me with any thoughts and feedback you might have. If you enjoyed this episode, please remember to subscribe (using the links below) and let others know about it on social media.</p>]]></description>
+		<enclosure url="https://f005.backblazeb2.com/file/vcdx-podcast/EP12-Observations_From_The_Other_Side.m4a" length="70210173" type="audio/x-m4a" />
+		<itunes:author>Simon Long</itunes:author>
+		<itunes:image href="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg" />
+		<itunes:episode>12</itunes:episode>
+		<podcast:episode>12</podcast:episode>
+		<itunes:title>EP12 - Observations From The Other Side</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:duration>28:43</itunes:duration>
+	</item>
+	<item>
+		<title>EP11 &#8211; It&#8217;s Not Just About VMware Technology</title>
+		<link>https://www.simonlong.co.uk/blog/2020/04/12/ep11-its-not-just-about-vmware-technology/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=ep11-its-not-just-about-vmware-technology</link>
+		<pubDate>Sun, 12 Apr 2020 19:51:37 +0000</pubDate>
+		<guid isPermaLink="false">https://www.simonlong.co.uk/blog/?p=6598</guid>
+		<comments>https://www.simonlong.co.uk/blog/2020/04/12/ep11-its-not-just-about-vmware-technology/#respond</comments>
+		<wfw:commentRss>https://www.simonlong.co.uk/blog/2020/04/12/ep11-its-not-just-about-vmware-technology/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ExcludeFromFrontPage]]></category>
+		<category><![CDATA[VCDX]]></category>
+		<category><![CDATA[vcdxpodcast]]></category>
+		<description><![CDATA[<p><img decoding="async" class="alignright size-thumbnail wp-image-6301" src="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg" alt="" width="150" height="150" srcset="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg 150w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-300x300.jpg 300w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small.jpg 500w" sizes="(max-width: 150px) 100vw, 150px" />In episode eleven of The VCDX Podcast, My special guest talks about how the skills they gained throughout their VCDX journey, has helped their career, even in a job that isn&#8217;t using VMware technologies.</p>
+<p><strong>News &amp; Updates</strong></p>
+<p>The forthcoming online VCDX Workshop</p>
+<ul>
+<li>Friday, April 24th 2020 &#8211; <a href="https://www.eventbrite.com/e/online-vcdx-workshop-tickets-89735369907">Register Here</a></li>
+</ul>
+<p>June Defense Application Entry Opens on Thursday 30th April. Don&#8217;t wait until the deadline to submit!!</p>
+<p><strong>Interview Notes &amp; Links</strong></p>
+<p>This week&#8217;s special guest is  <a href="https://twitter.com/FaisalHasan80">Faisal Hasan</a> (VCDX #254)</p>
+<p><strong>Q&amp;A</strong></p>
+<p>As always, if you have any questions you want answering on the Podcast, please send them to me via the two options below:</p>
+<ul>
+<li>My Twitter account: <a href="https://twitter.com/simonlong_" target="_blank" rel="noopener noreferrer">https://twitter.com/simonlong_</a></li>
+<li>Or find me on <a href="https://vcdxprepgroup.slack.com/" target="_blank" rel="noopener noreferrer">The VCDX Prep Slack Team</a></li>
+</ul>
+<p>I&#8217;m always looking for feedback and ways to improve the podcast, so please, contact me with any thoughts and feedback you might have. If you enjoyed this episode, please remember to subscribe (using the links below) and let others know about it on social media.</p>]]></description>
+		<enclosure url="https://f005.backblazeb2.com/file/vcdx-podcast/EP11-Its_Not_Just_About_VMware_Technology.m4a" length="50928009" type="audio/x-m4a" />
+		<itunes:author>Simon Long</itunes:author>
+		<itunes:episode>11</itunes:episode>
+		<podcast:episode>11</podcast:episode>
+		<itunes:title>EP11 - It&#039;s Not Just About VMware Technology</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:duration>20:47</itunes:duration>
+	</item>
+	<item>
+		<title>What Is The VCDX Podcast?</title>
+		<link>https://www.simonlong.co.uk/blog/2020/02/26/welcome-to-the-vcdx-podcast/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=welcome-to-the-vcdx-podcast</link>
+		<pubDate>Wed, 26 Feb 2020 02:47:00 +0000</pubDate>
+		<guid isPermaLink="false">https://www.simonlong.co.uk/blog/?p=6310</guid>
+		<comments>https://www.simonlong.co.uk/blog/2020/02/26/welcome-to-the-vcdx-podcast/#respond</comments>
+		<wfw:commentRss>https://www.simonlong.co.uk/blog/2020/02/26/welcome-to-the-vcdx-podcast/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ExcludeFromFrontPage]]></category>
+		<category><![CDATA[VCDX]]></category>
+		<description><![CDATA[<p><img loading="lazy" decoding="async" class="alignright size-thumbnail wp-image-6301" src="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg" alt="" width="150" height="150" srcset="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg 150w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-300x300.jpg 300w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small.jpg 500w" sizes="auto, (max-width: 150px) 100vw, 150px" />Hey guys, I just wanted to bring to your attention a new project that I am working on called <a href="http://www.simonlong.co.uk/blog/category/vcdxpodcast/">The VCDX Podcast</a>. Yep, another Podcast.</p>
+<p>As a VCDX panelist, I get asked a lot of questions related to the <a href="https://vcdx.vmware.com/" target="_blank" rel="noopener noreferrer">VCDX certification</a> and the overall process. So I decided, instead of answering every question individually, I would answer them on a Podcast for all to hear and learn from.</p>
+<p>The Podcast currently consists of 4 sections and this will probably change as the Podcast matures.</p>
+<ol>
+<li>VCDX News and Updates</li>
+<li>Special Guest Interview &#8211; With a mixture of VCDX panelists, mentors, and certification holders</li>
+<li>Common VCDX Mistakes</li>
+<li>Q&amp;A</li>
+</ol>
+<p><a href="https://www.simonlong.co.uk/blog/2019/04/27/the-vcdx-podcast-ep1-welcome-to-the-vcdx-podcast/">Episode 1 &#8211; Welcome To The VCDX Podcast</a> was released last week and can be listened to or downloaded below.</p>
+<p>The Podcast should be available where ever you get your Podcasts. Here are some quick links to the common platforms.</p>
+<p><a title="The VCDX Podcast on Apple Podcasts" href="https://podcasts.apple.com/us/podcast/the-vcdx-podcast/id1461672691?mt=2&amp;ls=1" target="_blank" rel="noopener noreferrer"><img loading="lazy" decoding="async" title="The VCDX Podcast on Apple Podcasts" src="http://live.staticflickr.com/65535/49600989321_b11260a5ea_o.png" alt="The VCDX Podcast on Apple Podcasts" width="165" height="40" /></a></p>
+<p><a title="The VCDX Podcast on Spotify" href="https://open.spotify.com/show/2x7VzPFFa8yD9Far0Eig3K?si=DI4QZ2orT2ekfPHh0T1-1Q" target="_blank" rel="noopener noreferrer"><img loading="lazy" decoding="async" title="The VCDX Podcast on Spotify" src="http://live.staticflickr.com/65535/49600945951_e0ef2bbae1_o.png" alt="The VCDX Podcast on Spotify" width="165" height="40" /></a></p>
+<p><a title="The VCDX Podcast on Google Play Music" href="https://play.google.com/music/listen?u=0#/ps/Ibmsngucg5muq4yd2dwt3ehnram" target="_blank" rel="noopener noreferrer"><img loading="lazy" decoding="async" title="The VCDX Podcast on Google Play Music" src="http://live.staticflickr.com/65535/49600521348_90b2680d8d_o.png" alt="The VCDX Podcast on Google Play Music" width="165" height="61" /></a></p>
+<p>As with everything I write about, please provide feedback or ideas on how to improve the Podcast. If you have questions that you want answering, you can either message me on Twitter: <a href="https://twitter.com/simonlong_" target="_blank" rel="noopener noreferrer">@SimonLong_</a> or you can send me an email via my <a href="http://www.simonlong.co.uk/blog/contact-simon/">Contact Simon</a> page</p>]]></description>
+		<enclosure url="https://f005.backblazeb2.com/file/vcdx-podcast/Trailer-The_VCDX_Podcast.m4a" length="4439079" type="audio/x-m4a" />
+		<itunes:author>Simon Long</itunes:author>
+		<itunes:episodeType>trailer</itunes:episodeType>
+		<itunes:duration>1:37</itunes:duration>
+	</item>
+	<item>
+		<title>EP10 &#8211; Learn From Previous Mistakes</title>
+		<link>https://www.simonlong.co.uk/blog/2020/02/18/ep10-learn-from-previous-mistakes/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=ep10-learn-from-previous-mistakes</link>
+		<pubDate>Tue, 18 Feb 2020 19:45:22 +0000</pubDate>
+		<guid isPermaLink="false">https://www.simonlong.co.uk/blog/?p=6552</guid>
+		<comments>https://www.simonlong.co.uk/blog/2020/02/18/ep10-learn-from-previous-mistakes/#respond</comments>
+		<wfw:commentRss>https://www.simonlong.co.uk/blog/2020/02/18/ep10-learn-from-previous-mistakes/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ExcludeFromFrontPage]]></category>
+		<category><![CDATA[VCDX]]></category>
+		<category><![CDATA[vcdxpodcast]]></category>
+		<description><![CDATA[<p><img loading="lazy" decoding="async" class="alignright size-thumbnail wp-image-6301" src="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg" alt="" width="150" height="150" srcset="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg 150w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-300x300.jpg 300w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small.jpg 500w" sizes="auto, (max-width: 150px) 100vw, 150px" />In episode ten of The VCDX Podcast, My special guest will share some of the common mistakes that they see regularly as a VCDX panelist, in the hope that future candidates don&#8217;t make the same mistakes as those who went before them.</p>
+<p><strong>News &amp; Updates</strong></p>
+<p>Congratulations to the newly minted VCDX&#8217;s since our last episode:</p>
+<ul>
+<li>VCDX #286 &#8211; <a href="https://twitter.com/zecevicigor" target="_blank" rel="noopener noreferrer">Igor Zecevic</a> &#8211; France (DCV)</li>
+<li>VCDX #287 &#8211; Katsuhiko Niino &#8211; Japan &#8211; (NV)</li>
+<li>VCDX #288 &#8211; Phoebe Kim &#8211; US &#8211; (NV)</li>
+</ul>
+<p>The forthcoming online VCDX Workshop</p>
+<ul>
+<li>Friday, Febrary 28th 2020 &#8211; <a href="https://www.eventbrite.com/e/online-vcdx-workshop-tickets-89734944635">Register Here</a></li>
+</ul>
+<p><strong>Interview Notes &amp; Links</strong></p>
+<p>This week&#8217;s special guest is <a href="https://twitter.com/pmcsharry?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" rel="noopener noreferrer">Paul McSharry</a> (VCDX #234)</p>
+<p>Talking Points:</p>
+<p>1. Risk Management &amp; Mitigation &#8211; &#8220;Risk is accepted by the business&#8221;<br />
+2. Too many constraints that limit the ability to show design expertise<br />
+3. Not enough logical design<br />
+4. Lack of diagrams both in design and in whiteboard for defense<br />
+5. Looking for a slide that answers the question, when a answer or drawing helps.<br />
+6. “I would use this tool (ie vROps,vRNI)“, without the how , why and impact.</p>
+<p><strong>Q&amp;A</strong></p>
+<p>AS always, if you have any questions you want answering on the Podcast, please send them to me via the two options below:</p>
+<ul>
+<li>My Twitter account: <a href="https://twitter.com/simonlong_" target="_blank" rel="noopener noreferrer">https://twitter.com/simonlong_</a></li>
+<li>Or find me on <a href="https://vcdxprepgroup.slack.com/" target="_blank" rel="noopener noreferrer">The VCDX Prep Slack Team</a></li>
+</ul>
+<p>I&#8217;m always looking for feedback and ways to improve the podcast, so please, contact me with any thoughts and feedback you might have. If you enjoyed this episode, please remember to subscribe (using the links below) and let others know about it on social media.</p>]]></description>
+		<enclosure url="https://media.blubrry.com/vcdxpodcast/simonlong.co.uk/podcast/EP10-Learn_From_Previous_Mistakes.m4a" length="53540381" type="audio/x-m4a" />
+		<itunes:author>Simon Long</itunes:author>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:duration>21:51</itunes:duration>
+	</item>
+	<item>
+		<title>EP9 &#8211; There Is More To Networking Than Networking</title>
+		<link>https://www.simonlong.co.uk/blog/2019/11/15/ep9-there-is-more-to-networking-than-networking/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=ep9-there-is-more-to-networking-than-networking</link>
+		<pubDate>Fri, 15 Nov 2019 04:18:49 +0000</pubDate>
+		<guid isPermaLink="false">https://www.simonlong.co.uk/blog/?p=6543</guid>
+		<comments>https://www.simonlong.co.uk/blog/2019/11/15/ep9-there-is-more-to-networking-than-networking/#respond</comments>
+		<wfw:commentRss>https://www.simonlong.co.uk/blog/2019/11/15/ep9-there-is-more-to-networking-than-networking/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ExcludeFromFrontPage]]></category>
+		<category><![CDATA[VCDX]]></category>
+		<category><![CDATA[vcdxpodcast]]></category>
+		<description><![CDATA[<p><img loading="lazy" decoding="async" class="alignright size-thumbnail wp-image-6301" src="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg" alt="" width="150" height="150" srcset="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg 150w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-300x300.jpg 300w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small.jpg 500w" sizes="auto, (max-width: 150px) 100vw, 150px" />In episode nine of The VCDX Podcast, My special guest will be answering some of our listener questions around the VCDX-NV certification.</p>
+<p><strong>News &amp; Updates</strong></p>
+<p>Up and coming VCDX Application deadline</p>
+<ul>
+<li>January 3rd &#8211; Deadline for March 2020 defense applications</li>
+</ul>
+<p><strong>Interview Notes &amp; Links</strong></p>
+<p>This week&#8217;s special guest is <a href="http://twitter.com/vmprime" target="_blank" rel="noopener noreferrer">Joe Silvagi</a> (VCDX #175)</p>
+<p><strong>Q&amp;A</strong></p>
+<p>AS always, if you have any questions you want answering on the Podcast, please send them to me via the two options below:</p>
+<ul>
+<li>My Twitter account: <a href="https://twitter.com/simonlong_" target="_blank" rel="noopener noreferrer">https://twitter.com/simonlong_</a></li>
+<li>Or find me on <a href="https://vcdxprepgroup.slack.com/" target="_blank" rel="noopener noreferrer">The VCDX Prep Slack Team</a></li>
+</ul>
+<p>I&#8217;m always looking for feedback and ways to improve the podcast, so please, contact me with any thoughts and feedback you might have. If you enjoyed this episode, please remember to subscribe (using the links below) and let others know about it on social media.</p>]]></description>
+		<enclosure url="https://f005.backblazeb2.com/file/vcdx-podcast/EP9-There_Is_More_To_Networking_Than_Networking.m4a" length="51422892" type="audio/x-m4a" />
+		<itunes:author>Simon Long</itunes:author>
+		<itunes:episode>9</itunes:episode>
+		<podcast:episode>9</podcast:episode>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:duration>20:59</itunes:duration>
+	</item>
+	<item>
+		<title>EP8 &#8211; Expect The Unexpected</title>
+		<link>https://www.simonlong.co.uk/blog/2019/10/12/ep8-expect-the-unexpected/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=ep8-expect-the-unexpected</link>
+		<pubDate>Sat, 12 Oct 2019 19:59:47 +0000</pubDate>
+		<guid isPermaLink="false">https://www.simonlong.co.uk/blog/?p=6495</guid>
+		<comments>https://www.simonlong.co.uk/blog/2019/10/12/ep8-expect-the-unexpected/#respond</comments>
+		<wfw:commentRss>https://www.simonlong.co.uk/blog/2019/10/12/ep8-expect-the-unexpected/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ExcludeFromFrontPage]]></category>
+		<category><![CDATA[VCDX]]></category>
+		<category><![CDATA[vcdxpodcast]]></category>
+		<description><![CDATA[<p><img loading="lazy" decoding="async" class="alignright size-thumbnail wp-image-6301" src="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg" alt="" width="150" height="150" srcset="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg 150w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-300x300.jpg 300w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small.jpg 500w" sizes="auto, (max-width: 150px) 100vw, 150px" />In episode eight of The VCDX Podcast, we&#8217;ll be hearing from our special guest about their recent VCDX defense experience and how it was actually quite a bit different from the experience they were expecting.</p>
+<p><strong>News &amp; Updates</strong></p>
+<p>Congratulations to the <strong>2</strong> new VCDX’s:</p>
+<ul>
+<li>
+<div>#284 – <a href="http://twitter.com/dejongraymond" target="_blank" rel="noopener noreferrer"><strong>Raymond De Jong</strong> </a>(NV)</div>
+</li>
+<li>
+<div>#285 – <strong>Pankaj Verma</strong> (NV)</div>
+</li>
+</ul>
+<p>Up and coming VCDX Workshops</p>
+<ul>
+<li>Phoenix VMUG UserCon on Wednesday, October 30th. <a href="https://www.vmug.com/events2/vmug-usercon/2019-phoenix-usercon" target="_blank" rel="noopener noreferrer">Register here for VMUG</a></li>
+<li>VMworld Barcelona on Monday, November 4th. <a href="https://www.vmware.com/learn/VMworld_VCDXWorkshop_347217_REG.html" target="_blank" rel="noopener noreferrer">Register here for the VCDX Workshop</a></li>
+<li>Online VCDX Workshop on Friday, November 15th. <a href="https://vcdx.co/33gtJKh" target="_blank" rel="noopener noreferrer">Register here for the VCDX Workshop</a></li>
+</ul>
+<p><strong>Interview Notes &amp; Links</strong></p>
+<p>This week&#8217;s special guest is Veronica Davis (VCDX #280)</p>
+<p><strong>Common VCDX Mistakes</strong></p>
+<ul>
+<li>“That was planned for phase 2 of this project&#8221; or &#8220;That was out of scope for this projcet&#8221;
+<ul>
+<li>Provided by VCDX panelist <a href="https://twitter.com/pmcsharry" target="_blank" rel="noopener noreferrer">Paul McSharry</a> and <a href="http://twitter.com/vmprime" target="_blank" rel="noopener noreferrer">Joe Silvagi</a></li>
+</ul>
+</li>
+</ul>
+<p><strong>Q&amp;A</strong></p>
+<p>AS always, if you have any questions you want answering on the Podcast, please send them to me via the two options below:</p>
+<ul>
+<li>My Twitter account: <a href="https://twitter.com/simonlong_" target="_blank" rel="noopener noreferrer">https://twitter.com/simonlong_</a></li>
+<li>Or find me on <a href="https://vcdxprepgroup.slack.com/" target="_blank" rel="noopener noreferrer">The VCDX Prep Slack Team</a></li>
+</ul>
+<p>I&#8217;m always looking for feedback and ways to improve the podcast, so please, contact me with any thoughts and feedback you might have. If you enjoyed this episode, please remember to subscribe (using the links below) and let others know about it on social media.</p>]]></description>
+		<enclosure url="https://f005.backblazeb2.com/file/vcdx-podcast/EP8-Expect_The_Unexpected.m4a" length="51951519" type="audio/x-m4a" />
+		<itunes:author>Simon Long</itunes:author>
+		<itunes:episode>8</itunes:episode>
+		<podcast:episode>8</podcast:episode>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:duration>21:12</itunes:duration>
+	</item>
+	<item>
+		<title>EP7 &#8211; If At First You Don&#8217;t Succeed</title>
+		<link>https://www.simonlong.co.uk/blog/2019/09/14/ep7-if-at-first-you-dont-succeed/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=ep7-if-at-first-you-dont-succeed</link>
+		<pubDate>Sat, 14 Sep 2019 15:15:59 +0000</pubDate>
+		<guid isPermaLink="false">https://www.simonlong.co.uk/blog/?p=6422</guid>
+		<comments>https://www.simonlong.co.uk/blog/2019/09/14/ep7-if-at-first-you-dont-succeed/#respond</comments>
+		<wfw:commentRss>https://www.simonlong.co.uk/blog/2019/09/14/ep7-if-at-first-you-dont-succeed/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ExcludeFromFrontPage]]></category>
+		<category><![CDATA[VCDX]]></category>
+		<category><![CDATA[vcdxpodcast]]></category>
+		<description><![CDATA[<p><img loading="lazy" decoding="async" class="alignright size-thumbnail wp-image-6301" src="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg" alt="" width="150" height="150" srcset="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg 150w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-300x300.jpg 300w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small.jpg 500w" sizes="auto, (max-width: 150px) 100vw, 150px" />In episode seven of The VCDX Podcast, we&#8217;ll be offering some advice on ways to recover from failing your latest VCDX certification attempt.</p>
+<p><strong>News &amp; Updates</strong></p>
+<ul>
+<li>There will be a VCDX Workshop at the Boston VMUG UserCon on Wednesday, September 25th. <a href="https://www.vmug.com/events2/vmug-usercon/2019-boston-usercon" target="_blank" rel="noopener noreferrer">Register here for the VCDX Workshop</a></li>
+</ul>
+<p><strong>Interview Notes &amp; Links</strong></p>
+<ul>
+<li>This week&#8217;s special guest is <a href="http://twitter.com/vcdx71" target="_blank" rel="noopener noreferrer">Mike Brown</a> (VCDX #71)</li>
+</ul>
+<p><strong>Q&amp;A</strong></p>
+<p>AS always, if you have any questions you want answering on the Podcast, please send them to me via the two options below:</p>
+<ul>
+<li>My Twitter account: <a href="https://twitter.com/simonlong_" target="_blank" rel="noopener noreferrer">https://twitter.com/simonlong_</a></li>
+<li>Or find me on <a href="https://vcdxprepgroup.slack.com/" target="_blank" rel="noopener noreferrer">The VCDX Prep Slack Team</a></li>
+</ul>
+<p>I&#8217;m always looking for feedback and ways to improve the podcast, so please, contact me with any thoughts and feedback you might have. If you enjoyed this episode, please remember to subscribe (using the links below) and let others know about it on social media.</p>]]></description>
+		<enclosure url="https://f005.backblazeb2.com/file/vcdx-podcast/EP7-If_At_First_You_Dont_Succeed.m4a" length="63544885" type="audio/x-m4a" />
+		<itunes:author>Simon Long</itunes:author>
+		<itunes:episode>7</itunes:episode>
+		<podcast:episode>7</podcast:episode>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:duration>25:59</itunes:duration>
+	</item>
+	<item>
+		<title>EP6 &#8211; Neon Pens At The Ready</title>
+		<link>https://www.simonlong.co.uk/blog/2019/08/02/ep6-neon-pens-at-the-ready/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=ep6-neon-pens-at-the-ready</link>
+		<pubDate>Fri, 02 Aug 2019 02:46:21 +0000</pubDate>
+		<guid isPermaLink="false">https://www.simonlong.co.uk/blog/?p=6404</guid>
+		<comments>https://www.simonlong.co.uk/blog/2019/08/02/ep6-neon-pens-at-the-ready/#respond</comments>
+		<wfw:commentRss>https://www.simonlong.co.uk/blog/2019/08/02/ep6-neon-pens-at-the-ready/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ExcludeFromFrontPage]]></category>
+		<category><![CDATA[VCDX]]></category>
+		<category><![CDATA[vcdxpodcast]]></category>
+		<description><![CDATA[<p><img loading="lazy" decoding="async" class="alignright size-thumbnail wp-image-6301" src="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg" alt="" width="150" height="150" srcset="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg 150w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-300x300.jpg 300w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small.jpg 500w" sizes="auto, (max-width: 150px) 100vw, 150px" />In episode six of The VCDX Podcast, we&#8217;ll be discussing everything VCDX related that we can expect to see at <a href="https://www.vmworld.com/en/us/index.html" target="_blank" rel="noopener noreferrer">VMworld 2019</a> which is just around the corner. And in our guest interview, I&#8217;ll be finding out about a new Lightboard series that&#8217;s aimed to help you prepare for your VCDX.</p>
+<p><strong>News &amp; Updates</strong></p>
+<ul>
+<li>This week&#8217;s special guest was <a href="https://twitter.com/karlchilds" target="_blank" rel="noopener noreferrer">Karl Childs</a></li>
+<li>There will be a VCDX Workshop just before VMworld US on Sunday, August 25th. <a href="https://upto.com/e/yoUNO" target="_blank" rel="noopener noreferrer">Register here for the VCDX Workshop</a></li>
+<li>There will be a VCDX Panel session during VMworld US in the Certifications area &#8211; Preparing for Your VCDX: What You Need to Know [EDU3683U] &#8211; Wednesday, August 28, 11:00 AM &#8211; 11:45 AM</li>
+</ul>
+<p><strong>Interview Notes &amp; Links</strong></p>
+<ul>
+<li>This week&#8217;s special guests are <a href="https://twitter.com/vhojan" target="_blank" rel="noopener noreferrer">Johan van Amersfoort</a> &amp; <a href="https://twitter.com/jeffreykusters" target="_blank" rel="noopener noreferrer">Jeffrey Kusters</a></li>
+<li><a href="https://twitter.com/ITQ" target="_blank" rel="noopener noreferrer">The ITQ Twitter Account</a></li>
+<li><a href="https://www.youtube.com/channel/UCUbl32jISWd70NICo4wIo0g" target="_blank" rel="noopener noreferrer">The ITQ YouTube Channel</a></li>
+</ul>
+<p><strong>Q&amp;A</strong></p>
+<p>If you have any questions you want answering, please send them to me via the two options below:</p>
+<ul>
+<li>My Twitter account: <a href="https://twitter.com/simonlong_" target="_blank" rel="noopener noreferrer">https://twitter.com/simonlong_</a></li>
+<li>Or find me on <a href="https://vcdxprepgroup.slack.com/" target="_blank" rel="noopener noreferrer">The VCDX Prep Slack Team</a></li>
+</ul>
+<p>I&#8217;m always looking for feedback and ways to improve the podcast, so please, contact me with any thoughts and feedback you might have. If you enjoyed this episode, please remember to Subscribe (using the links below) and let others know about it on social media.</p>]]></description>
+		<enclosure url="https://f005.backblazeb2.com/file/vcdx-podcast/EP6-Neon_Pens_At_The_Ready.m4a" length="83374471" type="audio/x-m4a" />
+		<itunes:author>Simon Long</itunes:author>
+		<itunes:episode>6</itunes:episode>
+		<podcast:episode>6</podcast:episode>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:duration>34:09</itunes:duration>
+	</item>
+	<item>
+		<title>EP5 &#8211; Slacking Is Encouraged</title>
+		<link>https://www.simonlong.co.uk/blog/2019/07/07/ep5-slacking-is-encouraged/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=ep5-slacking-is-encouraged</link>
+		<pubDate>Sun, 07 Jul 2019 15:00:36 +0000</pubDate>
+		<guid isPermaLink="false">https://www.simonlong.co.uk/blog/?p=6357</guid>
+		<comments>https://www.simonlong.co.uk/blog/2019/07/07/ep5-slacking-is-encouraged/#respond</comments>
+		<wfw:commentRss>https://www.simonlong.co.uk/blog/2019/07/07/ep5-slacking-is-encouraged/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ExcludeFromFrontPage]]></category>
+		<category><![CDATA[VCDX]]></category>
+		<category><![CDATA[vcdxpodcast]]></category>
+		<description><![CDATA[<p><img loading="lazy" decoding="async" class="alignright size-thumbnail wp-image-6301" src="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg" alt="" width="150" height="150" srcset="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg 150w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-300x300.jpg 300w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small.jpg 500w" sizes="auto, (max-width: 150px) 100vw, 150px" />In episode five of The VCDX Podcast, I&#8217;ll be chatting to my special guest about the <a href="https://vcdxprepgroup.slack.com/" target="_blank" rel="noopener noreferrer">VCDX Prep Slack Team</a>, finding out what it is and how you can use it to help yourself or others prepare for their VCDX.</p>
+<p><strong>News &amp; Updates</strong></p>
+<p>There will be a VCDX Workshop at the Indianapolis VMUG on Tuesday, July 16th. <a href="https://www.vmug.com/events2/vmug-usercon/2019-indianapolis-usercon" target="_blank" rel="noopener noreferrer">Register here for the Indy VMUG</a></p>
+<p><strong>Interview Notes &amp; Links</strong></p>
+<ul>
+<li>This week&#8217;s special guest is <a href="https://twitter.com/GreggRobertson5" target="_blank" rel="noopener noreferrer">Gregg Robertson</a></li>
+<li><a href="https://vcdxprepgroup.slack.com/" target="_blank" rel="noopener noreferrer">The VCDX Prep Slack Team</a></li>
+</ul>
+<p><strong>Common VCDX Mistakes</strong></p>
+<ul>
+<li>There are too many constraints in some VCDX designs, which limits the panelist&#8217;s ability to score the candidate in certain areas.</li>
+<li>Provided by VCDX panelist <a href="https://twitter.com/pmcsharry" target="_blank" rel="noopener noreferrer">Paul McSharry</a></li>
+</ul>
+<p><strong>Q&amp;A</strong></p>
+<p>If you have any questions you want answering, please send them to me via the two options below:</p>
+<ul>
+<li>My Twitter account: <a href="https://twitter.com/simonlong_" target="_blank" rel="noopener noreferrer">https://twitter.com/simonlong_</a></li>
+<li>Or find me on <a href="https://vcdxprepgroup.slack.com/" target="_blank" rel="noopener noreferrer">The VCDX Prep Slack Team</a></li>
+</ul>
+<p>I&#8217;m always looking for feedback and ways to improve the podcast, so please, contact me with any thoughts and feedback you might have. If you enjoyed this episode, please remember to Subscribe (using the links below) and let others know about it on social media.</p>]]></description>
+		<enclosure url="https://f005.backblazeb2.com/file/vcdx-podcast/EP5-Slacking_Is_Encouraged.m4a" length="114808762" type="audio/x-m4a" />
+		<itunes:author>Simon Long</itunes:author>
+		<itunes:episode>5</itunes:episode>
+		<podcast:episode>5</podcast:episode>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:duration>47:06</itunes:duration>
+	</item>
+	<item>
+		<title>EP4 &#8211; So Many New VCDX&#8217;s!</title>
+		<link>https://www.simonlong.co.uk/blog/2019/06/21/ep4-so-many-new-vcdxs/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=ep4-so-many-new-vcdxs</link>
+		<pubDate>Fri, 21 Jun 2019 16:09:57 +0000</pubDate>
+		<guid isPermaLink="false">https://www.simonlong.co.uk/blog/?p=6336</guid>
+		<comments>https://www.simonlong.co.uk/blog/2019/06/21/ep4-so-many-new-vcdxs/#respond</comments>
+		<wfw:commentRss>https://www.simonlong.co.uk/blog/2019/06/21/ep4-so-many-new-vcdxs/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ExcludeFromFrontPage]]></category>
+		<category><![CDATA[VCDX]]></category>
+		<category><![CDATA[vcdxpodcast]]></category>
+		<description><![CDATA[<p><img loading="lazy" decoding="async" class="alignright size-thumbnail wp-image-6301" src="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg" alt="" width="150" height="150" srcset="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg 150w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-300x300.jpg 300w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small.jpg 500w" sizes="auto, (max-width: 150px) 100vw, 150px" />In episode four of The VCDX Podcast, we recognize the newly crowned VCDX&#8217;s and I&#8217;ll be chatting to my special guest about their VCDX defense experience. What things went well, and what didn&#8217;t go so well.</p>
+<p><strong>News &amp; Updates</strong></p>
+<p>Congratulations to the <strong>5</strong> new VCDX&#8217;s:</p>
+<ul>
+<li>
+<div>#279 &#8211; <strong>Dmitri Tanurkov</strong> (NV)</div>
+</li>
+<li>
+<div>#280 &#8211; <strong>Veronica Sherin David</strong> (NV)</div>
+</li>
+<li>
+<div>#281 &#8211; <strong>Chris Porter</strong> (DCV)</div>
+</li>
+<li>
+<div>#282 &#8211; <strong>Syed Adeel Qamar</strong> (NV)</div>
+</li>
+<li>
+<div>#283 &#8211; <strong>Fouad EL Akkad</strong> (DCV)</div>
+</li>
+</ul>
+<p>And a special congratulations to Jeffrey Kusters #252 &#8211; who got his <strong>second VCDX</strong> (NV).  You can see the full list of VCDX&#8217;s on the <a href="https://vcdx.vmware.com/" target="_blank" rel="noopener">VCDX Directory</a></p>
+<p>There will be a VCDX Workshop at the Indianapolis VMUG on July 16th. <a href="https://www.vmug.com/events2/vmug-usercon/2019-indianapolis-usercon" target="_blank" rel="noopener">Register for the Indy VMUG</a></p>
+<p><strong>Interview Notes &amp; Links</strong></p>
+<ul>
+<li>This week&#8217;s special guest is <a href="https://twitter.com/uprightvinyl" target="_blank" rel="noopener">Chris Porter</a></li>
+<li><a href="https://toggl.com/" target="_blank" rel="noopener">Toggl</a> &#8211; Time tracking software Chris used in his defense prep</li>
+</ul>
+<p><strong>Q&amp;A</strong></p>
+<p>If you have any questions you want answering, please send them to me via the two options below:</p>
+<ul>
+<li>My Twitter account: <a href="https://twitter.com/simonlong_" target="_blank" rel="noopener">https://twitter.com/simonlong_</a></li>
+<li>My Contact Page: <a href="http://www.simonlong.co.uk/blog/contact-simon">http://www.simonlong.co.uk/blog/contact-simon</a></li>
+</ul>
+<p>I&#8217;m always looking for feedback and ways to improve the podcast, so please, contact me with any thoughts and feedback you might have. If you enjoyed this episode, please remember to Subscribe (using the links below) and let others know about it on social media.</p>]]></description>
+		<enclosure url="https://f005.backblazeb2.com/file/vcdx-podcast/EP4-So_Many_New_VCDXs.m4a" length="61994420" type="audio/x-m4a" />
+		<itunes:author>Simon Long</itunes:author>
+		<itunes:episode>4</itunes:episode>
+		<podcast:episode>4</podcast:episode>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:duration>25:20</itunes:duration>
+	</item>
+	<item>
+		<title>EP3 &#8211; Always Make Time For Game Of Thrones!</title>
+		<link>https://www.simonlong.co.uk/blog/2019/05/27/ep3-always-make-time-for-game-of-thrones/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=ep3-always-make-time-for-game-of-thrones</link>
+		<pubDate>Mon, 27 May 2019 15:48:00 +0000</pubDate>
+		<guid isPermaLink="false">https://www.simonlong.co.uk/blog/?p=6322</guid>
+		<comments>https://www.simonlong.co.uk/blog/2019/05/27/ep3-always-make-time-for-game-of-thrones/#respond</comments>
+		<wfw:commentRss>https://www.simonlong.co.uk/blog/2019/05/27/ep3-always-make-time-for-game-of-thrones/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ExcludeFromFrontPage]]></category>
+		<category><![CDATA[VCDX]]></category>
+		<category><![CDATA[vcdxpodcast]]></category>
+		<description><![CDATA[<p><img loading="lazy" decoding="async" class="alignright size-thumbnail wp-image-6301" src="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg" alt="" width="150" height="150" srcset="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg 150w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-300x300.jpg 300w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small.jpg 500w" sizes="auto, (max-width: 150px) 100vw, 150px" />In episode three of The VCDX Podcast, we focus our attention towards preparing for the VCDX defense. How can we find ways to make time in both our busy work and personal lives and then make the most of that limited time we have?</p>
+<p><strong>Interview Notes &amp; Links</strong></p>
+<ul>
+<li>This week&#8217;s special guest is <a href="https://twitter.com/uprightvinyl" target="_blank" rel="noopener">Chris Porter</a></li>
+<li>Virtual Design Master &#8211; <a href="https://virtualdesignmaster.io/" target="_blank" rel="noopener">https://virtualdesignmaster.io/</a></li>
+</ul>
+<p><strong>Common VCDX Mistakes Links</strong></p>
+<ul>
+<li><a href="https://www.simonlong.co.uk/blog/2015/09/23/vcdx-why-assume-anything/" target="_blank" rel="noopener">VCDX &#8211; Why Assume Anything?</a></li>
+</ul>
+<p>If you have any questions you want answering, please send them to me via the two options below:</p>
+<ul>
+<li>My Twitter account: <a href="https://twitter.com/simonlong_" target="_blank" rel="noopener">https://twitter.com/simonlong_</a></li>
+<li>My Contact Page: <a href="http://www.simonlong.co.uk/blog/contact-simon">http://www.simonlong.co.uk/blog/contact-simon</a></li>
+</ul>
+<p>I&#8217;m always looking for feedback and ways to improve the podcast, so please, contact me with any thoughts and feedback you might have. If you enjoyed this episode, please remember to Subscribe (using the links below) and let others know about it on social media.</p>]]></description>
+		<enclosure url="https://f005.backblazeb2.com/file/vcdx-podcast/EP3-Always_Make_Time_For_Game_Of_Thrones.m4a" length="52947764" type="audio/x-m4a" />
+		<itunes:author>Simon Long</itunes:author>
+		<itunes:episode>3</itunes:episode>
+		<podcast:episode>3</podcast:episode>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:duration>21:37</itunes:duration>
+	</item>
+	<item>
+		<title>EP2 &#8211; Removing The Stress From The VCDX Defense</title>
+		<link>https://www.simonlong.co.uk/blog/2019/05/12/ep2-removing-the-stress-from-the-vcdx-defense/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=ep2-removing-the-stress-from-the-vcdx-defense</link>
+		<pubDate>Sun, 12 May 2019 18:50:21 +0000</pubDate>
+		<guid isPermaLink="false">https://www.simonlong.co.uk/blog/?p=6315</guid>
+		<comments>https://www.simonlong.co.uk/blog/2019/05/12/ep2-removing-the-stress-from-the-vcdx-defense/#respond</comments>
+		<wfw:commentRss>https://www.simonlong.co.uk/blog/2019/05/12/ep2-removing-the-stress-from-the-vcdx-defense/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ExcludeFromFrontPage]]></category>
+		<category><![CDATA[VCDX]]></category>
+		<category><![CDATA[vcdxpodcast]]></category>
+		<description><![CDATA[<p><img loading="lazy" decoding="async" class="alignright size-thumbnail wp-image-6301" src="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg" alt="" width="150" height="150" srcset="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg 150w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-300x300.jpg 300w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small.jpg 500w" sizes="auto, (max-width: 150px) 100vw, 150px" />In episode two, we focus mostly on the VCDX Workshop. What the VCDX Workshop is, who should attend and how they can benefit.</p>
+<h4>News &amp; Updates Links</h4>
+<ul>
+<li>Online VCDX Workshop (May 24th) -Signup link here: <a href="https://upto.com/e/94V4O" target="_blank" rel="noopener">https://upto.com/e/94V4O</a></li>
+<li>VMUG VCDX Workshop Dates
+<ul>
+<li>6/6 &#8211; Philadelphia &#8211; Register here: <a href="http://bit.ly/2JfUPLg" target="_blank" rel="noopener">http://bit.ly/2JfUPLg</a></li>
+<li>7/16 &#8211; Indianapolis &#8211; Register here: <a href="http://bit.ly/2ViCdMr" target="_blank" rel="noopener">http://bit.ly/2ViCdMr</a></li>
+<li>9/25 &#8211; Boston &#8211; Register here: <a href="http://bit.ly/2VehA3W" target="_blank" rel="noopener">http://bit.ly/2VehA3W</a></li>
+<li>9/27 &#8211; New York/New Jersey &#8211; Register here: <a href="http://bit.ly/2HgStd2" target="_blank" rel="noopener">http://bit.ly/2HgStd2</a></li>
+<li>10/4 &#8211; Dallas &#8211; Register here: <a href="http://bit.ly/2JiKZsj" target="_blank" rel="noopener">http://bit.ly/2JiKZsj</a></li>
+<li>10/17 &#8211; Nashville &#8211; Register here: <a href="http://bit.ly/30gIb3W" target="_blank" rel="noopener">http://bit.ly/30gIb3W</a></li>
+<li>10/30 &#8211; Phoenix &#8211; Register here: <a href="http://bit.ly/2HdhlSS" target="_blank" rel="noopener">http://bit.ly/2HdhlSS</a></li>
+</ul>
+</li>
+</ul>
+<h4>Interview Notes &amp; Links</h4>
+<ul>
+<li>This week&#8217;s special guest is <a href="https://twitter.com/chrismutchler" target="_blank" rel="noopener">Chris Mutchler</a></li>
+<li>VCDX Mock Defense video &#8211; Defending your design &#8211; <a href="https://www.youtube.com/watch?v=Mb8kjoYGTD4" target="_blank" rel="noopener">https://www.youtube.com/watch?v=Mb8kjoYGTD4</a></li>
+<li>VCDX Mock Defense video &#8211; Design scenario examples &#8211; <a href="https://www.youtube.com/watch?v=03cgdD7UYVI" target="_blank" rel="noopener">https://www.youtube.com/watch?v=03cgdD7UYVI</a></li>
+</ul>
+<p>If you have any questions you want answering, please send them to me via the two options below:</p>
+<ul>
+<li>My Twitter account: <a href="https://twitter.com/simonlong_" target="_blank" rel="noopener">https://twitter.com/simonlong_</a></li>
+<li>My Contact Page: <a href="http://www.simonlong.co.uk/blog/contact-simon">http://www.simonlong.co.uk/blog/contact-simon</a></li>
+</ul>
+<p>I&#8217;m always looking for feedback and way&#8217;s to improve the podcast, so please, contact me with any thoughts and feedback you might have. If you enjoy the podcast, please remember to Subscribe and let others know on social media.</p>]]></description>
+		<enclosure url="https://f005.backblazeb2.com/file/vcdx-podcast/EP2-Removing_The_Stress_From_The_VCDX_Defense.m4a" length="14849146" type="audio/x-m4a" />
+		<itunes:author>Simon Long</itunes:author>
+		<itunes:episode>2</itunes:episode>
+		<podcast:episode>2</podcast:episode>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:duration>23:24</itunes:duration>
+	</item>
+	<item>
+		<title>EP1 &#8211; Welcome To The VCDX Podcast</title>
+		<link>https://www.simonlong.co.uk/blog/2019/04/27/the-vcdx-podcast-ep1-welcome-to-the-vcdx-podcast/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=the-vcdx-podcast-ep1-welcome-to-the-vcdx-podcast</link>
+		<pubDate>Sat, 27 Apr 2019 17:45:09 +0000</pubDate>
+		<guid isPermaLink="false">https://www.simonlong.co.uk/blog/?p=6298</guid>
+		<comments>https://www.simonlong.co.uk/blog/2019/04/27/the-vcdx-podcast-ep1-welcome-to-the-vcdx-podcast/#respond</comments>
+		<wfw:commentRss>https://www.simonlong.co.uk/blog/2019/04/27/the-vcdx-podcast-ep1-welcome-to-the-vcdx-podcast/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ExcludeFromFrontPage]]></category>
+		<category><![CDATA[VCDX]]></category>
+		<category><![CDATA[vcdxpodcast]]></category>
+		<description><![CDATA[<p>Welcome to the first ever episode of the VCDX Podcast.<img loading="lazy" decoding="async" class="alignright size-thumbnail wp-image-6301" src="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg" alt="" width="150" height="150" srcset="https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-150x150.jpg 150w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small-300x300.jpg 300w, https://www.simonlong.co.uk/podcast/artwork/VCDX_Podcast_Artwork_v3_small.jpg 500w" sizes="auto, (max-width: 150px) 100vw, 150px" /></p>
+<h4>Episode Summary</h4>
+<p>In today&#8217;s episode;</p>
+<ul>
+<li>I explain a little about the VCDX Podcast and why it decided to create it.</li>
+<li>A quick news update about an online VCDX Workshop that should not be missed! &#8211; Signup link here: <a href="https://upto.com/e/94V4O" target="_blank" rel="noopener noreferrer">https://upto.com/e/94V4O</a></li>
+<li>I am joined by a special guest, me! <a href="http://www.simonlong.co.uk/blog/about">Simon Long (VCDX #105)</a>.</li>
+<li>In the Q&amp;A section, I ask a common question regarding the VCDX defense presentation.</li>
+</ul>
+<p>If you have any questions you want answering, please send them to me via the two options below:</p>
+<ul>
+<li>My Twitter account: <a href="https://twitter.com/simonlong_" target="_blank" rel="noopener noreferrer">https://twitter.com/simonlong_</a></li>
+<li>My Contact Page: <a href="http://www.simonlong.co.uk/blog/contact-simon">http://www.simonlong.co.uk/blog/contact-simon</a></li>
+</ul>
+<p>I&#8217;m always looking for feedback and way&#8217;s to improve the podcast, so please, contact me with any thoughts and feedback you might have. If you enjoy the podcast, please remember to Subscribe and let others know on social media.</p>]]></description>
+		<enclosure url="https://f005.backblazeb2.com/file/vcdx-podcast/VCDX_Podcast_EP1-Welcome_To_The_VCDX_Podcast.m4a" length="8568159" type="audio/x-m4a" />
+		<itunes:author>Simon Long</itunes:author>
+		<itunes:episode>1</itunes:episode>
+		<podcast:episode>1</podcast:episode>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:duration>13:09</itunes:duration>
+	</item>
+</channel>
+</rss>

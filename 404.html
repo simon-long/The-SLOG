@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+<script type="text/javascript">
+  var path = window.location.pathname;
+
+  // If someone tries to access the old feed URL, 
+  // ensure they get the index.xml file.
+  if (path.includes('/blog/feed/podcast/')) {
+      window.location.href = "https://www.simonlong.co.uk/blog/feed/podcast/index.xml";
+  } 
+  // Otherwise, if they hit a dead link, send them back to the blog index
+  else {
+      window.location.href = "https://www.simonlong.co.uk/blog/";
+  }
+</script>
+    <meta http-equiv="refresh" content="5;url=https://www.simonlong.co.uk/">
+  </head>
+  <body>
+    <p>The blog has moved! Redirecting you now... if you aren't redirected, <a href="/">click here</a>.</p>
+  </body>
+</html>

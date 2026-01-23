@@ -1,0 +1,731 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11"><meta charset="UTF-8">
+	<title>  PCoIP Troubleshooting - The SLOG – SimonLong/Blog</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="https://www.simonlong.co.uk/blog/wp-content/themes/grid_focus/style.css" type="text/css" media="screen">
+	<link rel="alternate" type="application/rss+xml" title="Subscribe to The SLOG" href="http://feeds2.feedburner.com/Simonlong/blog">
+
+
+		<!--||  JM Twitter Cards by jmau111 v14.1.0  ||-->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@simonlong_">
+<!-- [(-_-)@ site: Missing critical option ! @(-_-)] -->
+<meta name="twitter:title" content="PCoIP Troubleshooting">
+<meta name="twitter:description" content="I don't think it wouldn't be a bold statement for me to say that &quot;out of the box&quot; Teradici's PCoIP display protocol can perform flawlessly on a LAN or High-Speed WAN environment.">
+<meta name="twitter:image" content="https://farm5.staticflickr.com/4029/4419996074_33e928718b_o.jpg">
+<!--||  /JM Twitter Cards by jmau111 v14.1.0  ||-->
+<meta name="robots" content="max-image-preview:large">
+<link rel="amphtml" href="https://www.simonlong.co.uk/blog/pcoip-troubleshooting/amp/"><meta name="generator" content="AMP for WP 1.1.11"><link rel="dns-prefetch" href="//www.simonlong.co.uk">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.simonlong.co.uk/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.simonlong.co.uk%2Fblog%2Fpcoip-troubleshooting%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.simonlong.co.uk/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.simonlong.co.uk%2Fblog%2Fpcoip-troubleshooting%2F&amp;format=xml">
+		<!-- This site uses the Google Analytics by ExactMetrics plugin v8.11.1 - Using Analytics tracking - https://www.exactmetrics.com/ -->
+		<!-- Note: ExactMetrics is not currently configured on this site. The site owner needs to authenticate with Google Analytics in the ExactMetrics settings panel. -->
+					<!-- No tracking code set -->
+				<!-- / Google Analytics by ExactMetrics -->
+		<style id="wp-img-auto-sizes-contain-inline-css" type="text/css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="https://www.simonlong.co.uk/blog/wp-includes/css/dist/block-library/style.min.css?ver=6.9" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel="stylesheet" id="fancybox-for-wp-css" href="https://www.simonlong.co.uk/blog/wp-content/plugins/fancybox-for-wordpress/assets/css/fancybox.css?ver=1.3.4" type="text/css" media="all">
+<link rel="stylesheet" id="i-agree-popups-css" href="https://www.simonlong.co.uk/blog/wp-content/plugins/i-agree-popups/includes/assets/css/i-agree-popups.css?ver=6.9" type="text/css" media="screen">
+<link rel="stylesheet" id="toc-screen-css" href="https://www.simonlong.co.uk/blog/wp-content/plugins/table-of-contents-plus/screen.min.css?ver=2411.1" type="text/css" media="all">
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/areyousure/js/ays_js.js?ver=6.9" id="ays_js-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/fancybox-for-wordpress/assets/js/purify.min.js?ver=1.3.4" id="purify-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/fancybox-for-wordpress/assets/js/jquery.fancybox.js?ver=1.3.4" id="fancybox-for-wp-js"></script>
+<link rel="https://api.w.org/" href="https://www.simonlong.co.uk/blog/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://www.simonlong.co.uk/blog/wp-json/wp/v2/pages/3481"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.simonlong.co.uk/blog/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.9">
+<link rel="canonical" href="https://www.simonlong.co.uk/blog/pcoip-troubleshooting/">
+<link rel="shortlink" href="https://www.simonlong.co.uk/blog/?p=3481">
+
+<!-- Fancybox for WordPress v3.3.7 -->
+<style type="text/css">
+	.fancybox-slide--image .fancybox-content{background-color: #FFFFFF}div.fancybox-caption{display:none !important;}
+	
+	img.fancybox-image{border-width:10px;border-color:#FFFFFF;border-style:solid;}
+	div.fancybox-bg{background-color:rgba(102,102,102,0.3);opacity:1 !important;}div.fancybox-content{border-color:#FFFFFF}
+	div#fancybox-title{background-color:#FFFFFF}
+	div.fancybox-content{background-color:#FFFFFF}
+	div#fancybox-title-inside{color:#333333}
+	
+	
+	
+	div.fancybox-caption p.caption-title{display:inline-block}
+	div.fancybox-caption p.caption-title{font-size:14px}
+	div.fancybox-caption p.caption-title{color:#333333}
+	div.fancybox-caption {color:#333333}div.fancybox-caption p.caption-title {background:#fff; width:auto;padding:10px 30px;}div.fancybox-content p.caption-title{color:#333333;margin: 0;padding: 5px 0;}body.fancybox-active .fancybox-container .fancybox-stage .fancybox-content .fancybox-close-small{display:block;}
+</style><script type="text/javascript">
+	jQuery(function () {
+
+		var mobileOnly = false;
+		
+		if (mobileOnly) {
+			return;
+		}
+
+		jQuery.fn.getTitle = function () { // Copy the title of every IMG tag and add it to its parent A so that fancybox can show titles
+			var arr = jQuery("a[data-fancybox]");jQuery.each(arr, function() {var title = jQuery(this).children("img").attr("title") || '';var figCaptionHtml = jQuery(this).next("figcaption").html() || '';var processedCaption = figCaptionHtml;if (figCaptionHtml.length && typeof DOMPurify === 'function') {processedCaption = DOMPurify.sanitize(figCaptionHtml, {USE_PROFILES: {html: true}});} else if (figCaptionHtml.length) {processedCaption = jQuery("<div>").text(figCaptionHtml).html();}var newTitle = title;if (processedCaption.length) {newTitle = title.length ? title + " " + processedCaption : processedCaption;}if (newTitle.length) {jQuery(this).attr("title", newTitle);}});		}
+
+		// Supported file extensions
+
+				var thumbnails = jQuery("a:has(img)").not(".nolightbox").not('.envira-gallery-link').not('.ngg-simplelightbox').filter(function () {
+			return /\.(jpe?g|png|gif|mp4|webp|bmp|pdf)(\?[^/]*)*$/i.test(jQuery(this).attr('href'))
+		});
+		
+
+		// Add data-type iframe for links that are not images or videos.
+		var iframeLinks = jQuery('.fancyboxforwp').filter(function () {
+			return !/\.(jpe?g|png|gif|mp4|webp|bmp|pdf)(\?[^/]*)*$/i.test(jQuery(this).attr('href'))
+		}).filter(function () {
+			return !/vimeo|youtube/i.test(jQuery(this).attr('href'))
+		});
+		iframeLinks.attr({"data-type": "iframe"}).getTitle();
+
+				// Gallery All
+		thumbnails.addClass("fancyboxforwp").attr("data-fancybox", "gallery").getTitle();
+		iframeLinks.attr({"data-fancybox": "gallery"}).getTitle();
+
+		// Gallery type NONE
+		
+		// Call fancybox and apply it on any link with a rel atribute that starts with "fancybox", with the options set on the admin panel
+		jQuery("a.fancyboxforwp").fancyboxforwp({
+			loop: false,
+			smallBtn: true,
+			zoomOpacity: "auto",
+			animationEffect: "fade",
+			animationDuration: 500,
+			transitionEffect: "fade",
+			transitionDuration: "300",
+			overlayShow: true,
+			overlayOpacity: "0.3",
+			titleShow: true,
+			titlePosition: "inside",
+			keyboard: true,
+			showCloseButton: true,
+			arrows: true,
+			clickContent:false,
+			clickSlide: "close",
+			mobile: {
+				clickContent: function (current, event) {
+					return current.type === "image" ? "toggleControls" : false;
+				},
+				clickSlide: function (current, event) {
+					return current.type === "image" ? "close" : "close";
+				},
+			},
+			wheel: false,
+			toolbar: true,
+			preventCaptionOverlap: true,
+			onInit: function() { },			onDeactivate
+	: function() { },		beforeClose: function() { },			afterShow: function(instance) { jQuery( ".fancybox-image" ).on("click", function( ){ ( instance.isScaledDown() ) ? instance.scaleToActual() : instance.scaleToFit() }) },				afterClose: function() { },					caption : function( instance, item ) {var title = "";if("undefined" != typeof jQuery(this).context ){var title = jQuery(this).context.title;} else { var title = ("undefined" != typeof jQuery(this).attr("title")) ? jQuery(this).attr("title") : false;}var caption = jQuery(this).data('caption') || '';if ( item.type === 'image' && title.length ) {caption = (caption.length ? caption + '<br />' : '') + '<p class="caption-title">'+jQuery("<div>").text(title).html()+'</p>' ;}if (typeof DOMPurify === "function" && caption.length) { return DOMPurify.sanitize(caption, {USE_PROFILES: {html: true}}); } else { return jQuery("<div>").text(caption).html(); }},
+		afterLoad : function( instance, current ) {var captionContent = current.opts.caption || '';var sanitizedCaptionString = '';if (typeof DOMPurify === 'function' && captionContent.length) {sanitizedCaptionString = DOMPurify.sanitize(captionContent, {USE_PROFILES: {html: true}});} else if (captionContent.length) { sanitizedCaptionString = jQuery("<div>").text(captionContent).html();}if (sanitizedCaptionString.length) { current.$content.append(jQuery('<div class=\"fancybox-custom-caption inside-caption\" style=\" position: absolute;left:0;right:0;color:#000;margin:0 auto;bottom:0;text-align:center;background-color:#FFFFFF \"></div>').html(sanitizedCaptionString)); }},
+			})
+		;
+
+			})
+</script>
+<!-- END Fancybox for WordPress -->
+            <script type="text/javascript"><!--
+                                function powerpress_pinw(pinw_url){window.open(pinw_url, 'PowerPressPlayer','toolbar=0,status=0,resizable=1,width=460,height=320');	return false;}
+                //-->
+
+                // tabnab protection
+                window.addEventListener('load', function () {
+                    // make all links have rel="noopener noreferrer"
+                    document.querySelectorAll('a[target="_blank"]').forEach(link => {
+                        link.setAttribute('rel', 'noopener noreferrer');
+                    });
+                });
+            </script>
+                <script>
+		if(screen.width<769){
+        	window.location = "https://www.simonlong.co.uk/blog/pcoip-troubleshooting/amp/?simply_static_page=2727";
+        }
+    	</script>
+	<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+ 	{lang: 'en-GB'}
+	</script>
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26882223-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-54150-8");
+	pageTracker._trackPageview();
+	} catch(err) {}</script>
+</head>
+<body>
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+<div id="wrapper">
+	
+	<div id="masthead" class="fix">
+
+		
+		<div class="forthColumn">
+	<div id="elseWhere">
+        <div class="middle_links">
+		  <h3>The VCDX Podcast</h3>
+            <center>
+                <ul>
+                    <a href="https://podcasts.apple.com/us/podcast/the-vcdx-podcast/id1461672691?mt=2&amp;ls=1" title="The VCDX Podcast on Apple Podcasts" target="_blank"><img src="http://live.staticflickr.com/65535/49600989321_b11260a5ea_o.png" width="165" height="40" alt="The VCDX Podcast on Apple Podcasts" title="The VCDX Podcast on Apple Podcasts"></a>
+                    <br><br>
+                    <a title="The VCDX Podcast on Spotify" href="https://open.spotify.com/show/2x7VzPFFa8yD9Far0Eig3K?si=DI4QZ2orT2ekfPHh0T1-1Q" target="_blank"><img title="The VCDX Podcast on Spotify" src="http://live.staticflickr.com/65535/49600945951_e0ef2bbae1_o.png" alt="The VCDX Podcast on Spotify" width="165" height="40"></a>
+                    <br><br>
+                    <a title="The VCDX Podcast on Google Play Music" href="https://podcasts.google.com/?feed=aHR0cHM6Ly93d3cuc2ltb25sb25nLmNvLnVrL2Jsb2cvZmVlZC9wb2RjYXN0Lw" target="_blank"><img title="The VCDX Podcast on Google Podcasts" src="https://live.staticflickr.com/65535/50011024337_7eee066fe9_m.jpg" alt="The VCDX Podcast on Google Podcasts" width="165" height="42"></a>
+                </ul>
+            </center>
+        </div>
+    </div>
+</div>
+	
+	</div>
+	
+	<div class="navStripWrapper">
+	
+	<ul class="nav fix">
+		<li><a href="https://www.simonlong.co.uk/blog/" title="Return to the the frontpage">Home<br><span>Return home</span></a></li>
+		<li><a href="https://www.simonlong.co.uk/blog/about" title="About Simon Long">About<br><span>Simon Long</span></a></li>
+		<li><a href="https://www.simonlong.co.uk/blog/horizon-view-api/" title="Horizon View API">Horizon View API<span></span></a></li>
+		<li><a href="https://www.simonlong.co.uk/blog/vcp6-5-dcv-practice-exams" title="VCP6.5 DCV Practice Exams">VCP6.5 DCV<br><span>Exams</span></a></li>
+		<li><a href="https://www.simonlong.co.uk/blog/public-cloud-hosted-vmware-cloud-foundation-services/" title="Comparison: Pubic Cloud-Hosted – VMware Cloud Foundation Services">CLOUD<br><span>vmware solutions</span></a></li>
+		
+		<li><a href="https://www.simonlong.co.uk/blog/category/vcdxpodcast/" title="The VCDX Podcast">Podcast<br><span>The VCDX</span></a></li>
+
+		<li><a href="https://www.twitter.com/simonlong_" target="_blank" title="Contact Simon Long">Contact<br><span>Simon Long</span></a></li>
+		<li id="searchBar1" class="searchField">
+			<div>
+				
+<form action="https://www.simonlong.co.uk/blog/search" id="cse-search-box">
+  <div class="google">
+    <input type="hidden" name="cx" value="000981533065326099150:vmqd-ofyxrg">
+    <input type="hidden" name="cof" value="FORID:10">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" size="31">
+    
+
+  </div>
+</form>
+
+
+<script async src="https://cse.google.com/cse.js?cx=52d63febca13e4585"></script>
+<div class="google"></div>
+
+			</div>
+		</li>
+		</ul>
+
+	<div class="bleetwrap">
+		<div class="bleettitle">
+			<strong>Latest vBeers:    </strong>																  																  																  
+																  <a href="http://vbeers.org/2020/02/07/vbeers-kubecon-cloudnativecon-eu-rai-grand-cafe-6pm-tue-31st-march/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=vbeers-kubecon-cloudnativecon-eu-rai-grand-cafe-6pm-tue-31st-march" target="_new" onclick="javascript: pageTracker._trackPageview(">
+																  vBeers – KubeCon -CloudnativeCon EU – Rai Grand Cafe 6pm Tue 31st March																  </a>
+																  
+																  																  
+																  		</div>
+			<div class="bleetsall"><a href="http://vbeers.org/" target="_new" onclick="javascript: pageTracker._trackPageview('/outgoing/allvbeers;')">View all vBeer events</a>
+		</div>
+	</div>
+	</div><div id="filler" class="fix">
+	<div id="mainColumn" class="fix"><a name="main"></a>
+				<div id="post-3481" class="post">
+			<div class="postMeta">
+				<p class="container">
+				</p><div id="greet_block"></div>
+					<span class="date"> </span>
+				
+			</div>
+			<h2><a href="https://www.simonlong.co.uk/blog/pcoip-troubleshooting/" title="PCoIP Troubleshooting">PCoIP Troubleshooting</a></h2>
+
+			<div class="entry">
+				<p>I don&apos;t think it wouldn&apos;t be a bold statement for me to say that &quot;out of the box&quot; Teradici&apos;s PCoIP display protocol can perform flawlessly on a LAN or High-Speed WAN environment. However this may not always be the case and certainly over slow remote WAN links PCoIP can present a poor user experience. (Equally, so can any other remote display protocols)</p>
+<p>Due to the nature of VDI, remote offices with low bandwidth, high latency connection are all to familiar. Initially performance is often poor and occasionally unusable. It&apos;s at this point you can throw in the towel and declare that VDI is not for your business OR you can try to workout what is causing the poor performance and try to improve it.</p>
+<p>So where do you start?</p>
+<p><span style="font-size:14px;"><strong>PCoIP Log Viewer</strong></span></p>
+<p>The best way to to find out exactly what is causing the problems is by analyzing the PCoIP logs which are stored on each virtual desktop with the <a href="http://mindfluxinc.net/?p=195" target="_blank">PCoIP Log Viewer</a>.  The PCoIP Log Viewer is a great tool created by a guy within VMware – <a href="http://twitter.com/rexremus">Chuck Hirstius</a>. A guide on how to install and parse PCoIP log files can be found <a href="http://mindfluxinc.net/?p=195" target="_blank">here</a>.</p>
+<p>The PCoIP logs can be found:</p>
+<ul>
+<li>XP – C:\Documents and Settings\All Users\Application Data\VMware\VDM\logs</li>
+<li>Win7 – C:\program data\application data\VMware\VDM\logs</li>
+</ul>
+<p>The log files we will use to troubleshoot with are the logs named: <strong>pcoip_server_&lt;year&gt;_&lt;month&gt;_&lt;day&gt;_&lt;sequential number&gt;.txt </strong></p>
+<p>Before the logs can be opened into the Log Viewer they need to be parsed using the <a href="http://hirstius.com/webstart/pcoip/pcoip_parse.exe" target="_blank">pcoip_parser.exe</a>. Below is an example command used to parse the PCoIP logs into XML format.</p>
+<p><em>C:\&gt; pcoip_parser.exe &quot;C:\program data\application data\VMware\VDM\logs&quot; &quot;C:\Parsed Logs&quot;</em></p>
+<p>Once we have parsed the PCoIP logs into an XML format we can now open the logs into the PCoIP Log Viewer. In the Log Viewer console we have four tabs, Server, Network, Options and Displays.</p>
+<p><strong>Server Tab</strong> <a class="flickr-image alignright" href="http://www.flickr.com/photos/36355998@N02/6642890337/" rel="flickr-mgr" title="Server Tab"><img decoding="async" alt="Server Tab" class="flickr-medium" src="http://farm8.static.flickr.com/7009/6642890337_1363129e16_m.jpg"></a> <br>
+	Most of the Server Info tab is self explanatory. The Processor type, is the processor for the virtual machine.</p>
+<p><strong>Network Tab</strong><a class="flickr-image alignright" href="http://www.flickr.com/photos/36355998@N02/6642890585/" rel="flickr-mgr" title="Network Tab"><img decoding="async" alt="Network Tab" class="flickr-medium" src="http://farm8.static.flickr.com/7018/6642890585_4e087a0a77_m.jpg"></a><br>
+	<strong>Link Speed  </strong>– Keep an eye on the <strong>Negotiated</strong> value. This value will show you the maximum speed. You may see the <strong>Server</strong> or <strong>Client</strong> values higher, but for obvious reasons the negotiated value will always equal the lowest. E.g. Server = 1,000,000, Client = 10,000, Negotiated = 10,000. This could indicate that the Client is only on a 10Mbit network, whereas the server is using 1Gbit. <br>
+	<strong>MTU </strong> –  Same situation as link speed, keep an eye on the <strong>Negotiated </strong>speed rather than Server or Client.</p>
+<p><strong>Options Tab </strong><a class="flickr-image alignright" href="http://www.flickr.com/photos/36355998@N02/6642890941/" rel="flickr-mgr" title="Options Tab"><img decoding="async" alt="Options Tab" class="flickr-medium" src="http://farm8.static.flickr.com/7148/6642890941_c61a6f0eb9_m.jpg"></a> <br>
+	This tab will display any configuration parameters that are overriding from the default settings. E.g changes to Max FPS, Max Bandwidth Session Limit etc.</p>
+<p><strong>Displays Tab </strong><a class="flickr-image alignright" href="http://www.flickr.com/photos/36355998@N02/6642891429/" rel="flickr-mgr" title="Screen shot 2012-01-05 at 8.00.01 PM"><img decoding="async" alt="Screen shot 2012-01-05 at 8.00.01 PM" class="flickr-medium" src="http://farm8.static.flickr.com/7171/6642891429_f9c5f27ee1_m.jpg"></a> <br>
+	<strong>Image quality</strong> shows <strong>Min</strong> – <strong>Max</strong> Image Quality current set. This can be changed via the pcoip.adm. </p>
+<p> </p>
+<p><strong style="font-size: 14px; ">PCoIP Performance Data</strong></p>
+<p>Below the tabbed information boxes there are 10 different graphs showing various different PCoIP performance data. I&apos;ll take you through them one at a time and explain to you what each value means and what is good or bad. The graphs have been ordered in order of popularity. The graphs at the top are more likely going to be the graphs that has the information you are interested in.</p>
+<p><strong>Note:</strong> The value <strong>Tx</strong> stands for transmit, and this data getting sent from the server to the End-Point (Thin Client etc), <strong>Rx</strong> stands for received and this is data being received by the server from the End-Point.</p>
+<p><strong>Tip:</strong> To Zoom in to a specific section of the graph, click on the graph and holding the mouse button down drag the curser to the R<u>ight</u> and cover the section you&apos;d like to view. To Zoom out click on the graph and holding the mouse button down drag the curser to the <u>Left</u> this will Zoom back out to the normal view.</p>
+<p><strong>PCoIP Bandwidth Utilization</strong><a class="flickr-image alignright" href="http://www.flickr.com/photos/36355998@N02/5987149073/" rel="flickr-mgr" title="PCoIP Bandwidth Utilization Graph"><img decoding="async" alt="PCoIP Bandwidth Utilization Graph" class="flickr-large" src="http://farm7.static.flickr.com/6025/5987149073_ed8fd50419_m.jpg"></a></p>
+<p>The PCoIP Bandwidth Utilization graph, shows you the following statics:</p>
+<ul>
+<li><span style="background-color:#a9a9a9;"><span style="color:#ffff00;">Limit </span></span><font class="Apple-style-span" color="#000000" face="'Trebuchet MS', Arial"><span class="Apple-style-span" style="font-size: 11px;"><span class="Apple-style-span" style="color: rgb(34, 34, 34); font-family: Arial, Verdana, sans-serif; font-size: 12px;">(The maximum allowed transmit rate (kBytes/s)) </span></span></font></li>
+<li><span style="color:#00f;">Plateau </span>(The theoretical bandwidth that the user could ideally use (a combination of user activity – display, USB, audio and other virtual channel as well as the network bandwidth available))</li>
+<li><span style="color:#f00;">Avg Tx</span> (Shows how much bandwidth is actually being used from the virtual desktop to the client (kBytes/s)) – Probably the value you be most interested in. This will show you how much bandwidth is being used by that End-Point.</li>
+<li><span style="color:#ffd700;">Avg Rx </span>(Shows how much bandwidth is actually being used from the client back to the virtual desktop (kBytes/s))</li>
+<li><span style="color:#add8e6;">Moving Avg. Tx</span></li>
+</ul>
+<p>The graph also displays the Overal Average Bandwidth for the entire segment. In the screenshot the Avg Bandwidth is 205Kbps.</p>
+<hr>
+<p><strong>PCoIP Bandwidth Rate Limiting</strong><a class="flickr-image alignright" href="http://www.flickr.com/photos/36355998@N02/5984529209/" rel="flickr-mgr" title="PCoIP Bandwidth Rate Limiting Graph"><img decoding="async" alt="PCoIP Bandwidth Rate Limiting Graph" class="flickr-large" src="http://farm7.static.flickr.com/6030/5984529209_64a55f2188_m.jpg"></a></p>
+<p>This PCoIP Bandwidth Rate Limiting graph shows you any adjustment PCoIP had to make to the bandwidth due to congestion.</p>
+<ul>
+<li><span style="color:#ffd700;">Loss Old </span>(Old bandwidth limit value before it was decreased by PCoIP)</li>
+<li><span style="color:#00f;">Loss New</span> (Value PCoIP reduced the bandwidth limit to)</li>
+<li><span style="color:#f00;">Overrun Old</span> (Transmit rate the server was transmitting to the client)</li>
+<li><span style="background-color:#a9a9a9;"><span style="color:#ffff00;">Overrun New</span></span> (Transmit rate that PCoIP has throttled itself down to to make sure less packets are dropped)</li>
+<li><span style="color:#add8e6;">Floor Old </span>(Bandwidth floor PCoIP thought it had)</li>
+<li><span style="color:#ee82ee;">Floor New </span>(Bandwidth floor after PCoIP had to throttled itself to down to)</li>
+</ul>
+<p><strong>Loss Old/New </strong>– is displaying changes in the available bandwidth limit. Loss Old displays the previous bandwidth rate and Loss New displays what the bandwidth rate has been reduced to. Loss (Reduction in the bandwidth limit) can be caused by lost packets that were sent by the server but never received by the client. PCoIP reduces the bandwidth limit in order to slow down the amount of packets being sent to try and stop the loss of packets.</p>
+<p>Notes: When there is no packet loss, PCoIP will increase the available bandwidth. The increase in available bandwidth is not reflected in the PCoIP logs. PCoIP packet loss does not always correlate to Network packet loss.</p>
+<p><strong>Overrun </strong>– generally means the server was transmitting data at a higher rate than the client can receive at, possibly due to a constrained network environment. The graph will shoe the Old rate and the rate PCoIP has decided to change the transmit to (New).</p>
+<p>Bandwidth <strong>Floor</strong> specifies a lower limit, in kilobits per second, for the bandwidth that is reserved by the PCoIP session. </p>
+<hr>
+<p><strong>PCoIP Connection Quality</strong><a class="flickr-image alignright" href="http://www.flickr.com/photos/36355998@N02/5984533141/" rel="flickr-mgr" title="PCoIP Connection Quality Graph"><img decoding="async" alt="PCoIP Connection Quality Graph" class="flickr-large" src="http://farm7.static.flickr.com/6026/5984533141_5af21e7b40_m.jpg"></a></p>
+<p>The PCoIP Connection Quality graph shows you information about dropped packets. (<strong>Note:</strong> PCoIP packet loss does not always correlate to Network packet loss.)</p>
+<ul>
+<li><span style="color:#ffd700;">Rx Loss</span> (Received packets dropped)</li>
+<li><span style="color:#00f;">Tx Loss</span> (Sent packets dropped)</li>
+</ul>
+<p>Pixel data will become flagged as Loss or &quot;Dropped&quot; if that data, or that area on the screen arrives after newer pixel data has already arrived. Some pixels my also just not arrive, in which case they will be flagged as Loss.</p>
+<p>You will often see a strong pattern of packet loss seen in this graph when there is bandwidth throttling (<span style="color:#00f;">Loss New</span>) seen in the PCoIP Bandwidth Rate Limiting graph.</p>
+<hr>
+<p><strong>PCoIP Packet Counts</strong><a class="flickr-image alignright" href="http://www.flickr.com/photos/36355998@N02/5984552117/" rel="flickr-mgr" title="PCoIP Packet Counts Graph"><img decoding="async" alt="PCoIP Packet Counts Graph" class="flickr-large" src="http://farm7.static.flickr.com/6009/5984552117_208ee2e791_m.jpg"></a></p>
+<p>The PCoIP Packet Counts graph does literally show you how many packets are being sent/received for that given period of time. Packets are broken down into three categories, Image packets, Audio packets and &quot;Other&quot; (Other can be another other than Image or Audio packets. So things like USB, Printer or Scanner packets). Generally you would focus more on the Tx packets as this is the packets going from the Server to the End-Point.</p>
+<ul>
+<li><span style="color:#ffd700;">Image Tx</span> (Image packets sent)</li>
+<li><span style="color:#00f;">Audio Tx</span> (Audio packets sent)</li>
+<li><span style="color:#f00;">Other Tx</span> (Other packets sent)</li>
+<li><span style="background-color:#a9a9a9;"><span style="color:#ffff00;">Image Rx</span></span> (Image packets received)</li>
+<li><span style="color:#add8e6;">Audio Rx</span> (Audio packets received)</li>
+<li><span style="color:#ee82ee;">Other Rx</span> (Other packets received)</li>
+</ul>
+<p>High packet count can often correlate with high packet loss (<span style="color:#00f;">Tx Loss</span>) seen in the graph above.</p>
+<hr>
+<p><strong>PCoIP Connection Latency</strong><a class="flickr-image alignright" href="http://www.flickr.com/photos/36355998@N02/5987731388/" rel="flickr-mgr" title="PCoIP Connection Latency Graph"><img decoding="async" alt="PCoIP Connection Latency Graph" class="flickr-large" src="http://farm7.static.flickr.com/6012/5987731388_ac9f240a67_m.jpg"></a></p>
+<ul>
+<li><span style="color: rgb(255, 215, 0);">Latency</span> (Basically PING response times)</li>
+<li><span style="color: rgb(0, 0, 255);">Variance – </span><span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: 13px; line-height: 19px;">is a measure of how far the Latency values are spread out.</span></li>
+</ul>
+<p> </p>
+<hr>
+<p><strong>PCoIP Encoder Stats</strong><a class="flickr-image alignright" href="http://www.flickr.com/photos/36355998@N02/5984615469/" rel="flickr-mgr" title="PCoIP Encoder Stats Graph"><img decoding="async" alt="PCoIP Encoder Stats Graph" class="flickr-large" src="http://farm7.static.flickr.com/6008/5984615469_2d49098176_m.jpg"></a></p>
+<p>The PCoIP Encoder Stats graph is useful when you are optimizing PCoIP.</p>
+<ul>
+<li><span style="color: rgb(255, 215, 0);">Slices</span> (PCoIP data (slices in UDP datagrams) – <span style="color: rgb(0, 0, 0); font-family: 'Trebuchet MS', Arial; font-size: 11px;"> </span>This should usually be very low. If you see this really high, there is a good chance you either have a network issue or a client issue.</li>
+<li><span style="color: rgb(0, 0, 255);">Max Slices</span></li>
+<li><font class="Apple-style-span" color="#ff0000">Quality Table </font> – The lower the number  = the higher the quality or less BTL (Build To Lossless). Typically 0-2 is good.</li>
+<li><span style="background-color:#a9a9a9;"><span style="color: rgb(255, 255, 0);">FPS</span></span>(Frames Per Second) – Display data frame update rate</li>
+<li><span style="color: rgb(173, 216, 230);">Flips</span> (How many samples from the video frame buffer are being taken per second. Default 30 FPS.)</li>
+</ul>
+<p>When looking at the <u>high</u> <span style="color:#f00;">Quality Table</span> values, you will often see a correlation with a large amount of packets being send with high packet loss and rate limiting. when looking at areas of <u>low</u> <span style="color:#f00;">Quality Tables</span> values, this will often coincide with a small amount of packet transfer, smaller amounts of packet loss and less rate limiting.</p>
+<p>Using the PCoIP Encoder Stats you can often identify opportunities to drop the frame rate which can help reduce overal bandwidth consumption.</p>
+<hr>
+<p><strong>PCoIP Encoder Stats – Changed Pixels</strong><b><a class="flickr-image alignright" href="http://www.flickr.com/photos/36355998@N02/5985178952/" rel="flickr-mgr" title="PCoIP Encoder Stats - Changed Pixels Graph"><img decoding="async" alt="PCoIP Encoder Stats - Changed Pixels Graph" class="flickr-large" src="http://farm7.static.flickr.com/6139/5985178952_9af65048eb_m.jpg"></a></b></p>
+<ul>
+<li><font class="Apple-style-span" color="#ffd700">Change Pixels </font><font class="Apple-style-span">– How many pixels have changed in the last 30 seconds</font></li>
+<li><span style="color: rgb(0, 0, 255);">Change Pixels (Not Motion)</span></li>
+</ul>
+<p> </p>
+<hr>
+<p><strong>PCoIP Encoder Stats – Delta Bits</strong><a class="flickr-image alignright" href="http://www.flickr.com/photos/36355998@N02/5985179030/" rel="flickr-mgr" title="PCoIP Encoder Stats - Delta Bits Graph"><img decoding="async" alt="PCoIP Encoder Stats - Delta Bits Graph" class="flickr-large" src="http://farm7.static.flickr.com/6145/5985179030_f05dcdcfa0_m.jpg"></a></p>
+<ul>
+<li><span style="color: rgb(255, 215, 0);">Delta Bits </span>(Overal amount of data packets)</li>
+<li><span style="color: rgb(0, 0, 255);">Delta Build Bits </span>(Amount of Build To Lossless data packets)</li>
+</ul>
+<p>Anytime you see a high <span style="color:#00f;">Delta Build Bits</span> value, you will probably also see a lower Quality Table value on the PCoIP Encoder Stats graph. </p>
+<hr>
+<p><strong>PCoIP Encoder Stats – Encoder Performance</strong><a class="flickr-image alignright" href="http://www.flickr.com/photos/36355998@N02/5984615785/" rel="flickr-mgr" title="PCoIP Encoder Stats - Encoder Performance Graph"><img decoding="async" alt="PCoIP Encoder Stats - Encoder Performance Graph" class="flickr-large" src="http://farm7.static.flickr.com/6021/5984615785_eb0542bbf7_m.jpg"></a></p>
+<ul>
+<li><font class="Apple-style-span" color="#ffd700">Bits Per Pixel </font>(How much PCoIP compression is happening) – The lower the value the more compression is being made. </li>
+<li><span style="color: rgb(0, 0, 255);">Bits Per Sec</span></li>
+<li><font class="Apple-style-span" color="#ff0000">MPix Per Sec </font></li>
+</ul>
+<p> </p>
+<hr>
+<p><strong>PCoIP Encoder Stats – Client Performance</strong><a class="flickr-image alignright" href="http://www.flickr.com/photos/36355998@N02/5985179300/" rel="flickr-mgr" title="PCoIP Encoder Stats - Client Performance Graph"><img decoding="async" alt="PCoIP Encoder Stats - Client Performance Graph" class="flickr-large" src="http://farm7.static.flickr.com/6134/5985179300_47926f3779_m.jpg"></a></p>
+<ul>
+<li><span class="Apple-style-span" style="color: rgb(255, 215, 0);">Client Decode Rate</span></li>
+</ul>
+<p>If the Client Decode Rate is always less that the <span style="color:#f00;">Avg Tx</span> found in the PCoIP Bandwidth Utilization graph, this may indicate that you have a Client problem or the client isn&apos;t powerful enough to decode the PCoIP data has its being received.</p>
+<hr>
+<p><span style="font-size:14px;"><strong>Analyzing PCoIP Data On The Graphs</strong></span></p>
+<p>Ok, now you know what most of the values on the graphs mean, lets take a look at how we can interprut what we see on the graphs to what problems might be causing poor performance.</p>
+<p>For this analysis example I will be using the PCoIP data captured from a WAN connected desktop. <br>
+	<a href="https://www.simonlong.co.uk/blog/WANZoom.jpg" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Exhibit</a>   (Best opened in a popup windows so you can flick between this screen and the graphs. Remember to allow Popups)</p>
+<table>
+<tbody>
+<tr class="title">
+<td><strong>Graph Analyzed</strong></td>
+<td><strong>Value</strong></td>
+<td><strong>Observations</strong></td>
+<td><strong>Conclusions</strong></td>
+</tr>
+<tr>
+<td>PCoIP Bandwidth Utilization</td>
+<td>Limit</td>
+<td>Before 5:40 it was 3.5Mbps after which it dropped to 1.25Mbps.</td>
+<td>Bandwidth Limit has almost been halved, possibly reduced by Rate Limiting</td>
+</tr>
+<tr>
+<td> </td>
+<td>Avg Tx</td>
+<td>Increase from practically nothing to 1.25Mbps</td>
+<td>Data transmitted from the server to the client has increase from nothing to a value almost equal to the limit.</td>
+</tr>
+<tr>
+<td>Bandwidth Rate Limiting</td>
+<td>Loss Old/New</td>
+<td>Was a steady 3Mbps then suddenly drop down to 0.5Mbps, then peaked/dropped between 1Mbps and 3Mbps</td>
+<td>Around the same time data transmission started (PCoIP Bandwidth Utilization graph) Loss reductions were seen instantly. It is worth noting that at the same time as the Loss reduction and the Limit getting throttled down there was a large spike in Tx Loss (Connection Quality graph).</td>
+</tr>
+<tr>
+<td>Connection Quality</td>
+<td>Tx Loss</td>
+<td>Went from zero % loss to 45% loss in a spike and then stayed between 5-10% loss</td>
+<td>A high amount of Packets being dropped/lost. This would probably cause the Bandwidth Limiting seen above.</td>
+</tr>
+<tr>
+<td> </td>
+<td>Rx Loss</td>
+<td>Remained zero</td>
+<td>All data was being transfered, very little data was being sent back to the server</td>
+</tr>
+<tr>
+<td>Packet Count</td>
+<td>Image Tx</td>
+<td>Value increased very quickly and remained high</td>
+<td>A massive amount of Image packets being transmitted could be due to a user making a lot of changes on the screen or watching a video</td>
+</tr>
+<tr>
+<td> </td>
+<td>Audio Tx</td>
+<td>Value increased very quickly and remained high</td>
+<td>A massive increase in audio packets could indicate either streaming audio or audio from a video. Due to the high amount of image packets seen at the same time, this could indicate a video being watched.</td>
+</tr>
+<tr>
+<td>Connection Latency</td>
+<td>Latency</td>
+<td>Stay the same</td>
+<td>Network Latency remained constant indicating there wasn&apos;t any bottlenecks or over-contention</td>
+</tr>
+<tr>
+<td>Encoder Stats</td>
+<td>Slice</td>
+<td>Went from zero and peaked to 45</td>
+<td>A high Slice value could indicate poor network conditions or issue with the client. In this case it could be caused by bandwidth throttling.</td>
+</tr>
+<tr>
+<td> </td>
+<td>Quality Table</td>
+<td>Went from zero and hovered between 1 and 3</td>
+<td>This high value could be related to packets being lost</td>
+</tr>
+<tr>
+<td> </td>
+<td>FPS</td>
+<td>Increased from zero to around 5.</td>
+<td>Frame update rate increase possible due to many screen changes or video</td>
+</tr>
+<tr>
+<td>Encoder Stats – Encoder Performance</td>
+<td>Bits per Pixel</td>
+<td>Stayed below 1</td>
+<td>This shows that compression was still performing fine</td>
+</tr>
+<tr>
+<td>Encoder Stats – Change Pixels</td>
+<td>Changed Pixels</td>
+<td>Went from 0 to 50,000</td>
+<td>High pixel change rates are often caused by videos or fast screen changes</td>
+</tr>
+<tr>
+<td>Encoder Stats – Delta Bits</td>
+<td>Delta bits</td>
+<td>Went from 0 to 35,000,000 Bits</td>
+<td>A high rate of screen changes causing a large amount of Bits being sent</td>
+</tr>
+<tr>
+<td> </td>
+<td>Delta Build Bits</td>
+<td>Went from 0 to 5,000 Bits</td>
+<td>Only a small amount of build to lossless going on. This could indicate quick changing screens that don&apos;t allow time for full build to lossless or enough bandwidth to satisfy Maximum Image Quality without the need for BTL.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Summary </strong></p>
+<p>By looking at the graph we able to deduce the following:</p>
+<ul>
+<li>At 5:40pm ImageTX and AudioTX Packet Count shot up. Often a large spike in both image and audio is observed when playing video&apos;s. We also saw the same patten with the Delta Bits, however the Delta Build Bits stayed relatively low in comparison. This would also indicate the viewing of a video or extremely quick screen refreshes which don&apos;t allow enough time for Build To Loss-Less. </li>
+<li>At exactly there was a massive peek in Packet Loss . PCoIP Packet Loss often occurs when packets arrive either late or out of order. If a packet is late due to contention on the network PCoIP will drop the packet as it is no longer required.</li>
+<li>Moments after the massive spike in Packet Loss the PCoIP Bandwidth Limit is throttled down. If the Bandwidth Limit is reduced the server will send the packets a slower rate, this often happens to help reduce Packet Loss.</li>
+</ul>
+			</div>
+			<div class="social">
+				<div class="feedcountdiv">
+					
+					<div class="feedcountimg">
+	
+					</div>
+				</div>
+								
+			</div>
+		</div>
+		<div id="commentsContainer">
+			
+<div id="disqus_thread"></div>
+		</div>
+			</div>
+	<div class="secondaryColumn">
+			
+	<div class="middle_links">
+	<h3>About The SLOG</h3>
+	Hey guys, Welcome!<br> I'm <a href="https://www.simonlong.co.uk/blog/about/" alt="About Simon Long">Simon Long</a> and I've setup this Blog to pass on my experiences and other useful information, mostly focused around <a href="http://en.wikipedia.org/wiki/Virtualization" target="_blank">Virtualization</a>.<br>
+		
+</div>
+
+<div class="ad_links">
+		<!-- BuySellAds Zone Code -->
+<div id="bsap_1295221" class="bsarocks bsap_75e0a401c916d2c221f158be509d65fa"></div>
+<!-- End BuySellAds Zone Code -->
+	</div>
+<div class="ad_links">
+<a href="https://www.buysellads.com/buy/detail/236818" target="_blank"><img src="https://farm3.staticflickr.com/2497/4178346221_be64b72fb8_m.jpg" width="210" height="50" alt="The SLOG"></a>
+</div>
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1304586" class="bsarocks bsap_75e0a401c916d2c221f158be509d65fa"></div>
+<!-- End BuySellAds Zone Code -->
+
+
+</div>
+</div>
+	<div id="footer" class="fix">
+		<div class="fifthColumn">
+	<div id="elseWhere2">
+		<div class="middle_links"> 
+			<h3>Categories</h3>
+			<ul>
+			<li><img src="http://farm4.static.flickr.com/3654/3418040728_e7f85b1e0d_o.jpg" border="0" width="16" height="16" alt="Categories" style="padding-right:5px;"><a href="https://www.simonlong.co.uk/blog/category/cloud/">Cloud</a></li>
+			<li><img src="http://farm4.static.flickr.com/3654/3418040728_e7f85b1e0d_o.jpg" border="0" width="16" height="16" alt="Categories" style="padding-right:5px;"><a href="https://www.simonlong.co.uk/blog/category/general_it/">General IT</a></li>
+			<li><img src="http://farm4.static.flickr.com/3654/3418040728_e7f85b1e0d_o.jpg" border="0" width="16" height="16" alt="Categories" style="padding-right:5px;"><a href="https://www.simonlong.co.uk/blog/category/powershell_scripts/">PowerShell Scripts</a></li>
+			<li><img src="http://farm4.static.flickr.com/3654/3418040728_e7f85b1e0d_o.jpg" border="0" width="16" height="16" alt="Categories" style="padding-right:5px;"><a href="https://www.simonlong.co.uk/blog/category/various/">Various</a></li>
+			<li><img src="http://farm4.static.flickr.com/3654/3418040728_e7f85b1e0d_o.jpg" border="0" width="16" height="16" alt="Categories" style="padding-right:5px;"><a href="https://www.simonlong.co.uk/blog/vcdx-study-notes/">VCDX Study Notes</a></li>
+			<li><img src="http://farm4.static.flickr.com/3654/3418040728_e7f85b1e0d_o.jpg" border="0" width="16" height="16" alt="Categories" style="padding-right:5px;"><a href="https://www.simonlong.co.uk/blog/vcp-vsphere-4-practice-exam/">VCP4 vSphere Practice Exams</a></li>
+			<li><img src="http://farm4.static.flickr.com/3654/3418040728_e7f85b1e0d_o.jpg" border="0" width="16" height="16" alt="Categories" style="padding-right:5px;"><a href="https://www.simonlong.co.uk/blog/vcp-vsphere-upgrade-study-notes/">VCP4 vSphere Study Notes</a></li>
+			<li><img src="http://farm4.static.flickr.com/3654/3418040728_e7f85b1e0d_o.jpg" border="0" width="16" height="16" alt="Categories" style="padding-right:5px;"><a href="https://www.simonlong.co.uk/blog/category/vmware/">VMware</a></li>
+				
+			</ul>
+		</div>	
+
+	</div>
+</div>
+	
+		<div class="sixthColumn">
+	<div id="elseWhere1">
+		<div class="middle_links"> 
+			<h3>Podcasts</h3>
+			<ul>
+			<li><img src="http://farm4.static.flickr.com/3374/3443812668_fc5113a4c8_o.jpg" border="0" width="16" height="16" alt="Admin Login" style="padding-right:5px;"><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=292461263" title="VMware Communities Roundtable Podcast">VMware Communities Roundtable</a></li>
+			<li><img src="http://farm4.static.flickr.com/3374/3443812668_fc5113a4c8_o.jpg" border="0" width="16" height="16" alt="Valid XHTML 1.0 Transitional" style="padding-right:5px;"><a href="https://itunes.apple.com/gb/podcast/stu-mchughs-virtualisation/id555945270" title="vNews" target="_blank">vNews</a></li>
+			<li><img src="http://farm4.static.flickr.com/3374/3443812668_fc5113a4c8_o.jpg" border="0" width="16" height="16" alt="Valid XHTML 1.0 Transitional" style="padding-right:5px;"><a href="http://www.itunes.com/podcast?id=413137668" title="vSoup" target="_blank">vSoup</a></li>
+<li><img src="http://farm4.static.flickr.com/3374/3443812668_fc5113a4c8_o.jpg" border="0" width="16" height="16" alt="Valid XHTML 1.0 Transitional" style="padding-right:5px;"><a href="https://itunes.apple.com/us/podcast/vchat-mp3-version-latest-in/id387225723?mt=2" title="vChat" target="_blank">vChat</a></li>
+<li><img src="http://farm4.static.flickr.com/3374/3443812668_fc5113a4c8_o.jpg" border="0" width="16" height="16" alt="Valid XHTML 1.0 Transitional" style="padding-right:5px;"><a href="https://itunes.apple.com/us/podcast/the-chinwag-audio-only/id356669479?mt=2" title="Chinwag" target="_blank">Chinwag</a></li>
+			</ul>
+		</div>	
+	</div>
+</div>		<div class="seventhColumn">
+	<div id="elseWhere1">
+		<div class="middle_links"> 
+			<h3>Meta</h3>
+			<ul>
+			<li><img src="http://farm4.static.flickr.com/3649/3417237013_883379da6e_o.jpg" border="0" width="16" height="16" alt="Admin Login" style="padding-right:5px;"><a href="https://www.simonlong.co.uk/blog/wp-login.php" title="Log In">Log in</a></li>
+			<li><img src="http://farm4.static.flickr.com/3649/3417237013_883379da6e_o.jpg" border="0" width="16" height="16" alt="Valid XHTML 1.0 Transitional" style="padding-right:5px;"><a href="http://validator.w3.org/check?uri=referer" title="Valid XHTML 1.0" target="_blank">Valid XHTML 1.0</a></li>
+			<li><img src="http://farm4.static.flickr.com/3649/3417237013_883379da6e_o.jpg" border="0" width="16" height="16" alt="Valid XHTML 1.0 Transitional" style="padding-right:5px;"><a href="http://jigsaw.w3.org/css-validator/check/referer" title="Valid CSS!" target="_blank">Valid CSS!</a></li>
+<li><img src="http://farm4.static.flickr.com/3649/3417237013_883379da6e_o.jpg" border="0" width="16" height="16" alt="Valid XHTML 1.0 Transitional" style="padding-right:5px;"><a href="https://www.simonlong.co.uk/blog/donate" title="Donate to The SLOG">Donate</a></li>			
+			<li><img src="http://farm4.static.flickr.com/3649/3417237013_883379da6e_o.jpg" border="0" width="16" height="16" alt="Valid XHTML 1.0 Transitional" style="padding-right:5px;"><a href="https://www.simonlong.co.uk/blog/sitemap_index.xml" title="Site Map" target="_blank">Site Map</a></li>
+			</ul>
+		</div>	
+	</div>
+</div>	</div>
+</div>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/blog/*"},{"not":{"href_matches":["/blog/wp-*.php","/blog/wp-admin/*","/blog/wp-content/uploads/*","/blog/wp-content/*","/blog/wp-content/plugins/*","/blog/wp-content/themes/grid_focus/*","/blog/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b" id="syntaxhighlighter-core-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushAS3.js?ver=3.0.9b" id="syntaxhighlighter-brush-as3-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushArduino.js?ver=3.0.9b" id="syntaxhighlighter-brush-arduino-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushBash.js?ver=3.0.9b" id="syntaxhighlighter-brush-bash-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushColdFusion.js?ver=3.0.9b" id="syntaxhighlighter-brush-coldfusion-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushClojure.js?ver=20090602" id="syntaxhighlighter-brush-clojure-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCpp.js?ver=3.0.9b" id="syntaxhighlighter-brush-cpp-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCSharp.js?ver=3.0.9b" id="syntaxhighlighter-brush-csharp-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCss.js?ver=3.0.9b" id="syntaxhighlighter-brush-css-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDelphi.js?ver=3.0.9b" id="syntaxhighlighter-brush-delphi-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDiff.js?ver=3.0.9b" id="syntaxhighlighter-brush-diff-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushErlang.js?ver=3.0.9b" id="syntaxhighlighter-brush-erlang-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushFSharp.js?ver=20091003" id="syntaxhighlighter-brush-fsharp-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushGo.js?ver=3.0.9b" id="syntaxhighlighter-brush-go-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushGroovy.js?ver=3.0.9b" id="syntaxhighlighter-brush-groovy-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushHaskell.js?ver=3.0.9b" id="syntaxhighlighter-brush-haskell-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJava.js?ver=3.0.9b" id="syntaxhighlighter-brush-java-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJavaFX.js?ver=3.0.9b" id="syntaxhighlighter-brush-javafx-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJScript.js?ver=3.0.9b" id="syntaxhighlighter-brush-jscript-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushLatex.js?ver=20090613" id="syntaxhighlighter-brush-latex-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushMatlabKey.js?ver=20091209" id="syntaxhighlighter-brush-matlabkey-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushObjC.js?ver=20091207" id="syntaxhighlighter-brush-objc-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPerl.js?ver=3.0.9b" id="syntaxhighlighter-brush-perl-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js?ver=3.0.9b" id="syntaxhighlighter-brush-php-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPlain.js?ver=3.0.9b" id="syntaxhighlighter-brush-plain-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPowerShell.js?ver=3.0.9b" id="syntaxhighlighter-brush-powershell-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPython.js?ver=3.0.9b" id="syntaxhighlighter-brush-python-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushR.js?ver=20100919" id="syntaxhighlighter-brush-r-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushRuby.js?ver=3.0.9b" id="syntaxhighlighter-brush-ruby-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushScala.js?ver=3.0.9b" id="syntaxhighlighter-brush-scala-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushSql.js?ver=3.0.9b" id="syntaxhighlighter-brush-sql-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushSwift.js?ver=3.0.9b" id="syntaxhighlighter-brush-swift-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushVb.js?ver=3.0.9b" id="syntaxhighlighter-brush-vb-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js?ver=3.0.9b" id="syntaxhighlighter-brush-xml-js"></script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushYaml.js?ver=3.0.9b" id="syntaxhighlighter-brush-yaml-js"></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.head.appendChild( corecss );
+		var themecssurl = "https://www.simonlong.co.uk/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeRDark.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		document.head.appendChild( themecss );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['auto-links'] = false;
+	SyntaxHighlighter.defaults['pad-line-numbers'] = true;
+	SyntaxHighlighter.all();
+
+	// Infinite scroll support
+	if ( typeof( jQuery ) !== 'undefined' ) {
+		jQuery( function( $ ) {
+			$( document.body ).on( 'post-load', function() {
+				SyntaxHighlighter.highlight();
+			} );
+		} );
+	}
+</script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-includes/js/comment-reply.min.js?ver=6.9" id="comment-reply-js" async="async" data-wp-strategy="async" fetchpriority="low"></script>
+<script type="text/javascript" id="disqus_count-js-extra">
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"theslog"};
+//# sourceURL=disqus_count-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/disqus-comment-system/public/js/comment_count.js?ver=3.1.3" id="disqus_count-js"></script>
+<script type="text/javascript" id="disqus_embed-js-extra">
+/* <![CDATA[ */
+var embedVars = {"disqusConfig":{"integration":"wordpress 3.1.3 6.9"},"disqusIdentifier":"3481 https://www.simonlong.co.uk/blog/?page_id=3481","disqusShortname":"theslog","disqusTitle":"PCoIP Troubleshooting","disqusUrl":"https://www.simonlong.co.uk/blog/pcoip-troubleshooting/","postId":"3481"};
+//# sourceURL=disqus_embed-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/disqus-comment-system/public/js/comment_embed.js?ver=3.1.3" id="disqus_embed-js"></script>
+<script type="text/javascript" id="toc-front-js-extra">
+/* <![CDATA[ */
+var tocplus = {"smooth_scroll":"1"};
+//# sourceURL=toc-front-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.simonlong.co.uk/blog/wp-content/plugins/table-of-contents-plus/front.min.js?ver=2411.1" id="toc-front-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.simonlong.co.uk/blog/wp-includes/js/wp-emoji-release.min.js?ver=6.9"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://www.simonlong.co.uk/blog/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+<script language="javascript" type="text/javascript">
+    SyntaxHighlighter.config.stripBrs = true;
+    SyntaxHighlighter.all();
+</script>
+</body>
+</html>
